@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata created="2018-11-29T14:00:06.666Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ns2="http://musicbrainz.org/ns/ext#-2.0">
+  <release-list count="32" offset="0">
+    <release id="d63421fd-91f4-482b-890e-c5799f65c85c" ns2:score="100">
+      <title>Switchin Lanez</title>
+      <status>Official</status>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="6996c0ed-dbdf-4e6b-915d-c1faa1fdc4fe">
+            <name>A.I.T</name>
+            <sort-name>A.I.T</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="f1a7f7a5-3113-4ddb-a7e6-1b0e6f5f660e" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Switchin Lanez</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2013-03-25</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2013-03-25</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="0019712a-a4d6-43bf-8abc-cae2c1e71af6" ns2:score="77">
+      <title>Fargo Fridays</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="1745c940-23d0-4dcc-b082-331bd8b1fdf8" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>Fargo Fridays</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <medium-list count="1">
+        <track-count>11</track-count>
+        <medium>
+          <disc-list count="0"/>
+          <track-list count="11"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="8cdc68da-8bcd-4047-9c98-11e6d6176384" ns2:score="77">
+      <title>I Told You [Target Deluxe Edition]</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="94152cbf-477c-4ba4-ac8a-3ca4454c5d8f" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>I Told You</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+      </release-group>
+      <date>2016-08-19</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2016-08-19</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>16</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="16"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="9bd9f717-164e-487d-8fc4-7b38c3b7f558" ns2:score="77">
+      <title>Cruel Intentions</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="0a971339-50fe-4552-a587-f14d757a25ba" type="EP" type-id="6d0c5bf6-7a33-3420-a519-44fc63eedebf">
+        <title>Cruel Intentions</title>
+        <primary-type id="6d0c5bf6-7a33-3420-a519-44fc63eedebf">EP</primary-type>
+      </release-group>
+      <date>2015-06-26</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2015-06-26</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <barcode/>
+      <medium-list count="1">
+        <track-count>5</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="5"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="da1e289e-8b48-4a5c-8046-6a3b0dfd032f" ns2:score="77">
+      <title>Say It</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="b22156cd-944d-4044-8947-da73ce1b7bc8" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Say It</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2015-07-30</date>
+      <country>XW</country>
+      <release-event-list>
+        <release-event>
+          <date>2015-07-30</date>
+          <area id="525d4e18-3d00-31b9-a58b-a146a916de8f">
+            <name>[Worldwide]</name>
+            <sort-name>[Worldwide]</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>XW</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="565db30f-4f42-4861-8f60-fffd4930eb7f" ns2:score="77">
+      <title>Chixtape 3</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="c53ab454-ccc3-4ae8-afdc-dce09feedeec" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>Chixtape 3</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <label-info-list>
+        <label-info>
+          <label id="157afde4-4bf5-4039-8ad2-5a15acc85176">
+            <name>[no label]</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>12</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="12"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="4ac7f88f-069a-4cbb-bef3-2bb260ac9732" ns2:score="77">
+      <title>The New Toronto</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="b5cdc230-f26b-4e66-8072-cdab78e19e01" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>The New Toronto</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <label-info-list>
+        <label-info>
+          <label id="157afde4-4bf5-4039-8ad2-5a15acc85176">
+            <name>[no label]</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>11</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="11"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="fb258159-f300-43d4-8b6e-f1029c4b22a6" ns2:score="77">
+      <title>LUV (Snakehips remix)</title>
+      <status>Official</status>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="e85bb2ab-1779-41e3-a300-5503724f32b1" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>LUV (Snakehips remix)</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+        <secondary-type-list>
+          <secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <date>2016-12-09</date>
+      <country>XW</country>
+      <release-event-list>
+        <release-event>
+          <date>2016-12-09</date>
+          <area id="525d4e18-3d00-31b9-a58b-a146a916de8f">
+            <name>[Worldwide]</name>
+            <sort-name>[Worldwide]</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>XW</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <barcode>0602557307887</barcode>
+      <label-info-list>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="26f59522-092c-4654-a90d-d53973cf2aa7" ns2:score="77">
+      <title>I Told You</title>
+      <status>Official</status>
+      <disambiguation>Explicit</disambiguation>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="94152cbf-477c-4ba4-ac8a-3ca4454c5d8f" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>I Told You</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+      </release-group>
+      <date>2016-08-19</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2016-08-19</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <barcode>602557045932</barcode>
+      <asin>B01IX6YV5C</asin>
+      <label-info-list>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>14</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="14"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="507d0d69-72e3-48c0-871e-c7cc562aaf79" ns2:score="77">
+      <title>The New Toronto 2</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="19c4f436-bf61-49d9-973c-9a438cb3702c" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>The New Toronto 2</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <medium-list count="1">
+        <track-count>13</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="13"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="6f9b7b9a-12b7-4481-9076-7820b5f99cec" ns2:score="77">
+      <title>Chixtape 4</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="c103f04f-262c-485a-913c-c93b792d1408" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>Chixtape 4</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <medium-list count="1">
+        <track-count>12</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="12"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="3b4d01f4-eb03-4842-992b-b14b672e4f2c" ns2:score="77">
+      <title>Lost Cause</title>
+      <status>Official</status>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="d447c047-1b87-4e7a-93e0-84448b28a2a9" type="Other" type-id="4fc3be2b-de1e-396b-a933-beb8f1607a22">
+        <title>Lost Cause</title>
+        <primary-type id="4fc3be2b-de1e-396b-a933-beb8f1607a22">Other</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <date>2014-10-01</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2014-10-01</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <barcode/>
+      <label-info-list>
+        <label-info>
+          <label id="157afde4-4bf5-4039-8ad2-5a15acc85176">
+            <name>[no label]</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>12</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="12"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="7169641c-c8f5-4d78-a59d-2de542a08e6e" ns2:score="77">
+      <title>Talk to Me</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="d38253f9-3692-4f9c-9fa7-9f90b553e1f6" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Talk to Me</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2018-06-21</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-06-21</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="1534f85f-0d44-4cad-852b-195f3aa28145" ns2:score="77">
+      <title>LA Confidential</title>
+      <text-representation>
+        <language>eng</language>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="03532a47-1152-43c5-b007-8dae8f300009" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>LA Confidential</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2016-01-29</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2016-01-29</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="c029628b-6633-439e-bcee-ed02e8a338f7">
+            <name>EMI</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="1d2ecff6-ccbb-4668-b9b9-e2faf2c3f906" ns2:score="77">
+      <title>The Bag</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="fd9c481c-2cbd-4efc-a926-929fb73533d4" type="EP" type-id="6d0c5bf6-7a33-3420-a519-44fc63eedebf">
+        <title>The Bag</title>
+        <primary-type id="6d0c5bf6-7a33-3420-a519-44fc63eedebf">EP</primary-type>
+      </release-group>
+      <date>2018-02-10</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-02-10</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <medium-list count="1">
+        <track-count>3</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="3"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="9938dfd7-b9a6-4956-b9f9-9984a60b832d" ns2:score="77">
+      <title>Memories Don’t Die</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="1492e68f-9da4-4ace-b13f-fc55586063fd" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>Memories Don’t Die</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+      </release-group>
+      <medium-list count="1">
+        <track-count>18</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="18"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="fef0a633-71b3-4d5c-9331-b075b447737e" ns2:score="77">
+      <title>I Told You</title>
+      <status>Official</status>
+      <disambiguation>deluxe edition</disambiguation>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="94152cbf-477c-4ba4-ac8a-3ca4454c5d8f" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>I Told You</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+      </release-group>
+      <date>2016-08-19</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2016-08-19</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <barcode>602557153453</barcode>
+      <label-info-list>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="10d10177-912d-4e71-bd94-fddced3bcb2b">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>28</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="28"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="19878dd2-0d34-428e-b8dd-640347e2bc80" ns2:score="77">
+      <title>Pa Mí</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="6cf08b2c-d44b-4139-afaf-86745bc6e808" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Pa Mí</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2018-06-08</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-06-08</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="9eda9473-9970-4c85-acf2-cdcf2828946f" ns2:score="77">
+      <title>Chixtape 2</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="a58ba7d7-4175-4d06-aa9a-b94371b76e20" type="Other" type-id="4fc3be2b-de1e-396b-a933-beb8f1607a22">
+        <title>Chixtape 2</title>
+        <primary-type id="4fc3be2b-de1e-396b-a933-beb8f1607a22">Other</primary-type>
+        <secondary-type-list>
+          <secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <date>2014-03-06</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2014-03-06</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <medium-list count="1">
+        <track-count>14</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="14"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="c8703e39-8021-4019-b431-71cba74ddbbb" ns2:score="77">
+      <title>Diego</title>
+      <status>Promotion</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="5a1069bb-3739-48e8-b0a2-e79e37d7055f" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Diego</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2015-01-19</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2015-01-19</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="97d87a9e-532e-4be0-9238-f5dfcf98f58d" ns2:score="77">
+      <title>LoVE me NOw</title>
+      <status>Official</status>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="608cb6de-147a-4914-8be6-2c89e8c7a402" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+        <title>LoVE me NOw</title>
+        <primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+      </release-group>
+      <date>2018-10-26</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-10-26</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>15</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="15"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="d9d62baf-c695-4316-85aa-d4d29da354e0" ns2:score="53">
+      <title>Senseless (remix)</title>
+      <status>Official</status>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit joinphrase=" feat. ">
+          <artist id="c5a73e97-82ff-4b97-a9f7-49b1f799cb87">
+            <name>Stefflon Don</name>
+            <sort-name>Don, Stefflon</sort-name>
+            <disambiguation>London-based grime artist</disambiguation>
+          </artist>
+        </name-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="ea30173a-b030-4fd9-8bc7-20540ca28ea1" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Senseless (remix)</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+        <secondary-type-list>
+          <secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <date>2018-11-12</date>
+      <country>US</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-11-12</date>
+          <area id="489ce91b-6658-3307-9877-795b68554c98">
+            <name>United States</name>
+            <sort-name>United States</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>US</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="f8aa1a0c-ff47-4246-b174-063e6f820b6b">
+            <name>54 London</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="d9221e3b-ddac-44e4-b7ba-8e5c94da7e7b" ns2:score="42">
+      <title>Miss You (Remixes)</title>
+      <status>Official</status>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit joinphrase=", ">
+          <artist id="8fbcd70f-bf1e-4624-b94a-fcff6b0c637e">
+            <name>Cashmere Cat</name>
+            <sort-name>Cashmere Cat</sort-name>
+          </artist>
+        </name-credit>
+        <name-credit joinphrase=" &amp; ">
+          <artist id="75be165a-ad83-4d12-bd28-f589a15c479f">
+            <name>Major Lazer</name>
+            <sort-name>Major Lazer</sort-name>
+          </artist>
+        </name-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="7c5a666e-8bb3-4d54-96bd-dfb454934ea4" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Miss You (Remixes)</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+        <secondary-type-list>
+          <secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+        </secondary-type-list>
+      </release-group>
+      <date>2018-04-06</date>
+      <country>GB</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-04-06</date>
+          <area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+            <name>United Kingdom</name>
+            <sort-name>United Kingdom</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>GB</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>2</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="2"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="4158fc29-38ae-4410-92ef-1780972b5da0" ns2:score="42">
+      <title>Miss You</title>
+      <status>Official</status>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit joinphrase=", ">
+          <artist id="8fbcd70f-bf1e-4624-b94a-fcff6b0c637e">
+            <name>Cashmere Cat</name>
+            <sort-name>Cashmere Cat</sort-name>
+          </artist>
+        </name-credit>
+        <name-credit joinphrase=" &amp; ">
+          <artist id="75be165a-ad83-4d12-bd28-f589a15c479f">
+            <name>Major Lazer</name>
+            <sort-name>Major Lazer</sort-name>
+          </artist>
+        </name-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="8f4f6ee9-edbe-4b9b-b57d-bc13eddb3e71" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Miss You</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2018-01-16</date>
+      <country>GB</country>
+      <release-event-list>
+        <release-event>
+          <date>2018-01-16</date>
+          <area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+            <name>United Kingdom</name>
+            <sort-name>United Kingdom</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>GB</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+    <release id="2b233814-506f-40ce-8782-519eee593fca" ns2:score="41">
+      <title>Trust Nobody</title>
+      <status>Official</status>
+      <disambiguation>clean version</disambiguation>
+      <packaging>None</packaging>
+      <text-representation>
+        <language>eng</language>
+        <script>Latn</script>
+      </text-representation>
+      <artist-credit>
+        <name-credit joinphrase=" feat. ">
+          <artist id="8fbcd70f-bf1e-4624-b94a-fcff6b0c637e">
+            <name>Cashmere Cat</name>
+            <sort-name>Cashmere Cat</sort-name>
+          </artist>
+        </name-credit>
+        <name-credit joinphrase=" &amp; ">
+          <artist id="e4bc69e2-a064-4f93-ada1-f7f209cc1cc3">
+            <name>Selena Gomez</name>
+            <sort-name>Gomez, Selena</sort-name>
+          </artist>
+        </name-credit>
+        <name-credit>
+          <artist id="5b8ec72b-9e39-4a06-a2bf-964166b92a71">
+            <name>Tory Lanez</name>
+            <sort-name>Lanez, Tory</sort-name>
+          </artist>
+        </name-credit>
+      </artist-credit>
+      <release-group id="05159891-0522-4e08-bcf4-8a29929a478a" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+        <title>Trust Nobody</title>
+        <primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+      </release-group>
+      <date>2016-09-30</date>
+      <country>XW</country>
+      <release-event-list>
+        <release-event>
+          <date>2016-09-30</date>
+          <area id="525d4e18-3d00-31b9-a58b-a146a916de8f">
+            <name>[Worldwide]</name>
+            <sort-name>[Worldwide]</sort-name>
+            <iso-3166-1-code-list>
+              <iso-3166-1-code>XW</iso-3166-1-code>
+            </iso-3166-1-code-list>
+          </area>
+        </release-event>
+      </release-event-list>
+      <label-info-list>
+        <label-info>
+          <label id="2182a316-c4bd-4605-936a-5e2fac52bdd2">
+            <name>Interscope Records</name>
+          </label>
+        </label-info>
+        <label-info>
+          <label id="1e718629-1fe2-4d0d-8342-ac13d2cd3e8d">
+            <name>Mad Love Records</name>
+          </label>
+        </label-info>
+      </label-info-list>
+      <medium-list count="1">
+        <track-count>1</track-count>
+        <medium>
+          <format>Digital Media</format>
+          <disc-list count="0"/>
+          <track-list count="1"/>
+        </medium>
+      </medium-list>
+      <tag-list/>
+    </release>
+  </release-list>
+</metadata>

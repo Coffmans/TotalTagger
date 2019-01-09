@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TotalTagger.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AudioDBUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://theaudiodb.com/api/v1/json/195003/searchtrack.php?s=</Value>
+    </Setting>
+    <Setting Name="LastFMTrackSearchUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ws.audioscrobbler.com/2.0/?method=track.search&amp;api_key=</Value>
+    </Setting>
+    <Setting Name="MBBaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MetaBrainz.MusicBrainz</Value>
+    </Setting>
+    <Setting Name="MBUserAgentUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://github.com/Zastai/MusicBrainz</Value>
+    </Setting>
+    <Setting Name="MBVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.2.0.0</Value>
+    </Setting>
+    <Setting Name="MBRecordingUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://musicbrainz.org/ws/2/recording/?query=</Value>
+    </Setting>
+    <Setting Name="SpotifyBaseAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://developer.spotify.com/web-api/</Value>
+    </Setting>
+    <Setting Name="DiscogsRequestTokenUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.discogs.com/oauth/request_token</Value>
+    </Setting>
+    <Setting Name="DiscogsAuthorizeUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.discogs.com/oauth/authorize</Value>
+    </Setting>
+    <Setting Name="DiscogsAccessTokenUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.discogs.com/oauth/access_token</Value>
+    </Setting>
+    <Setting Name="LastFMAlbumGetInto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ws.audioscrobbler.com/2.0/?method=album.getinfo&amp;api_key=</Value>
+    </Setting>
+    <Setting Name="LastFMTrackGetInfo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ws.audioscrobbler.com/2.0/?method=track.getinfo&amp;api_key=</Value>
+    </Setting>
+    <Setting Name="LastFMArtistTopAlbums" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&amp;api_key=</Value>
+    </Setting>
+    <Setting Name="MBReleaseUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://musicbrainz.org/ws/2/release/?query=</Value>
+    </Setting>
+    <Setting Name="NapsterURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://api.rhapsody.com/v2/search?q=%SEARCHTERM%&amp;include=genres&amp;type=track&amp;limit=%LIMIT%&amp;apikey=%APIKEY%</Value>
+    </Setting>
+    <Setting Name="ITunesURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://itunes.apple.com/search?term=%SEARCHTERM%&amp;media=music&amp;limit=1</Value>
+    </Setting>
+    <Setting Name="DeezerURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://api.deezer.com/search?q=artist:%SEARCHARTIST%track:%SEARCHTITLE%&amp;limit=%LIMIT%&amp;order=RANKING</Value>
+    </Setting>
+    <Setting Name="GalibooUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://secure.galiboo.com/api/metadata/tracks/search/?token=%APIKEY%&amp;track=%SEARCHTITLE%</Value>
+    </Setting>
+    <Setting Name="GalibooUrlArtist" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://secure.galiboo.com/api/metadata/tracks/search/?token=%APIKEY%&amp;artist=%SEARCHARTIST%</Value>
+    </Setting>
+    <Setting Name="GeniusURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.genius.com/search?q=%SEARCHTERM%&amp;access_token=%APIKEY%&amp;text_format=plain</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define TotalTagger_TargetDir=$(var.TotalTagger.TargetDir)?>
+	<Product Id="*" Name="TotalTagger" Language="1033" Version="2.1.0.1" Manufacturer="Coffman" UpgradeCode="d6a845b2-3fa4-45f7-be9c-1f11fd16fb80">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" AdminImage="yes" InstallPrivileges="elevated" Platform="x64"/>
+    <UIRef Id="WixUI_Minimal" />
+
+    <Property Id="MSIUSEREALADMINDETECTION" Value="1" />
+
+    <Icon Id="Logo" SourceFile="$(var.ProjectDir)Logo.ico" />
+    <Property Id="ARPPRODUCTICON" Value="Logo" />
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="TotalTagger" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id='ProgramFiles64Folder' Name='PFiles'>
+        <Directory Id="INSTALLFOLDER" Name="TotalTagger" />
+      </Directory>
+      <!--<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="TotalTagger" />
+			</Directory>-->
+			<Directory Id="ProgramMenuFolder">
+				<Directory Id="ApplicationProgramsFolder" Name="TotalTagger" />
+			</Directory>
+			<Directory Id="DesktopFolder" Name="Desktop" />
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="ApplicationProgramsFolder">
+			<Component Id="ApplicationShortcut" Guid="EE8F4D02-6ED9-40A9-812D-58C49E4708DA">
+				<Shortcut Id="ApplicationStartMenuShortcut" Name="TotalTagger" Description="TotalTagger" Target="[INSTALLFOLDER]TotalTagger.exe" WorkingDirectory="INSTALLFOLDER" />
+				<RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+				<RegistryValue Root="HKCU" Key="Software\TotalTagger" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+		<DirectoryRef Id="DesktopFolder">
+			<Component Id="ApplicationShortcutDesktop" Guid="2E38A043-9ED0-444E-AD78-8A0E8199C867">
+				<Shortcut Id="ApplicationDesktopShortcut" Name="TotalTagger" Description="TotalTagger" Target="[INSTALLFOLDER]TotalTagger.exe" WorkingDirectory="INSTALLFOLDER" />
+				<RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+				<RegistryValue Root="HKCU" Key="Software\TotalTagger" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="TotalTagger.exe" Guid="3de6dc16-8a77-4141-a138-1248d2bf75ea">
+				<File Id="TotalTagger.exe" Name="TotalTagger.exe" Source="$(var.TotalTagger_TargetDir)TotalTagger.exe" />
+			</Component>
+			<Component Id="TotalTagger.exe.config" Guid="226746a4-8a1f-449b-9126-ce28ffb40504">
+				<File Id="TotalTagger.exe.config" Name="TotalTagger.exe.config" Source="$(var.TotalTagger_TargetDir)TotalTagger.exe.config" />
+			</Component>
+			<Component Id="Newtonsoft.Json.dll" Guid="3c715141-12f9-4dc9-80a5-7048b13d2c6a">
+				<File Id="Newtonsoft.Json.dll" Name="Newtonsoft.Json.dll" Source="$(var.TotalTagger_TargetDir)Newtonsoft.Json.dll" />
+			</Component>
+			<Component Id="RestSharpHelper.dll" Guid="22f20385-e3c5-4c5b-8319-f93c8b29fca8">
+				<File Id="RestSharpHelper.dll" Name="RestSharpHelper.dll" Source="$(var.TotalTagger_TargetDir)RestSharpHelper.dll" />
+			</Component>
+			<Component Id="System.Reactive.dll" Guid="f074371e-8546-4ff4-b94a-6067ecd54f56">
+				<File Id="System.Reactive.dll" Name="System.Reactive.dll" Source="$(var.TotalTagger_TargetDir)System.Reactive.dll" />
+			</Component>
+			<Component Id="RestSharp.dll" Guid="dcc3f2ab-f809-4f25-9ef7-86b3003bbfe6">
+				<File Id="RestSharp.dll" Name="RestSharp.dll" Source="$(var.TotalTagger_TargetDir)RestSharp.dll" />
+			</Component>
+			<Component Id="ParkSquare.Gracenote.dll" Guid="7ee58b6e-17df-4fb2-bfb3-9a47779f0939">
+				<File Id="ParkSquare.Gracenote.dll" Name="ParkSquare.Gracenote.dll" Source="$(var.TotalTagger_TargetDir)ParkSquare.Gracenote.dll" />
+			</Component>
+			<Component Id="DiscogsClient.dll" Guid="6f21a862-bbaa-45a6-80a2-7095b56d93ef">
+				<File Id="DiscogsClient.dll" Name="DiscogsClient.dll" Source="$(var.TotalTagger_TargetDir)DiscogsClient.dll" />
+			</Component>
+			<Component Id="taglib_sharp.dll" Guid="01f79084-80f0-4a31-925d-f64f00dbe78d">
+				<File Id="taglib_sharp.dll" Name="taglib-sharp.dll" Source="$(var.TotalTagger_TargetDir)taglib-sharp.dll" />
+			</Component>
+			<Component Id="SpotifyAPI.dll" Guid="2de58bec-bf5a-4cb2-ba9c-f65f01f54523">
+				<File Id="SpotifyAPI.dll" Name="SpotifyAPI.dll" Source="$(var.TotalTagger_TargetDir)SpotifyAPI.dll" />
+			</Component>
+			<Component Id="RateLimiter.dll" Guid="874eb84a-d5bb-4485-ba0b-2f6824a726a3">
+				<File Id="RateLimiter.dll" Name="RateLimiter.dll" Source="$(var.TotalTagger_TargetDir)RateLimiter.dll" />
+			</Component>
+			<Component Id="System.Runtime.CompilerServices.Unsafe.dll" Guid="ae4be6ac-f83e-461f-9bb0-1bd517ccaf09">
+				<File Id="System.Runtime.CompilerServices.Unsafe.dll" Name="System.Runtime.CompilerServices.Unsafe.dll" Source="$(var.TotalTagger_TargetDir)System.Runtime.CompilerServices.Unsafe.dll" />
+			</Component>
+			<Component Id="System.Threading.Tasks.Extensions.dll" Guid="f9e3a667-2c37-4ebb-af95-8678132cb001">
+				<File Id="System.Threading.Tasks.Extensions.dll" Name="System.Threading.Tasks.Extensions.dll" Source="$(var.TotalTagger_TargetDir)System.Threading.Tasks.Extensions.dll" />
+			</Component>
+			<Component Id="System.ValueTuple.dll" Guid="99e3cccd-aec7-4b97-b8f5-988fae6ad3bd">
+				<File Id="System.ValueTuple.dll" Name="System.ValueTuple.dll" Source="$(var.TotalTagger_TargetDir)System.ValueTuple.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

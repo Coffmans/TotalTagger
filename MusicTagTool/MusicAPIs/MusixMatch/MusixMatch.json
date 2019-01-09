@@ -1,0 +1,68 @@
+{
+  {
+    "message": {
+      "header": {
+        "status_code": 200,
+        "execute_time": 0.093870878219604,
+        "confidence": 1000,
+        "mode": "search",
+        "cached": 1
+      },
+      "body": {
+        "track": {
+          "track_id": 157967021,
+          "track_mbid": "",
+          "track_isrc": "",
+          "track_spotify_id": "",
+          "track_soundcloud_id": "",
+          "track_xboxmusic_id": "",
+          "track_name": "RAP DEVIL",
+          "track_name_translation_list": [],
+          "track_rating": 52,
+          "track_length": 282,
+          "commontrack_id": 87007262,
+          "instrumental": 0,
+          "explicit": 1,
+          "has_lyrics": 1,
+          "has_lyrics_crowd": 0,
+          "has_subtitles": 1,
+          "has_richsync": 1,
+          "num_favourite": 244,
+          "lyrics_id": 18264184,
+          "subtitle_id": 22395590,
+          "album_id": 30080998,
+          "album_name": "BINGE",
+          "artist_id": 33491440,
+          "artist_mbid": "f6af669a-56ea-448a-a044-de76181ada33",
+          "artist_name": "Machine Gun Kelly",
+          "album_coverart_100x100": "http://s.mxmcdn.net/images-storage/albums/nocover.png",
+          "album_coverart_350x350": "",
+          "album_coverart_500x500": "",
+          "album_coverart_800x800": "",
+          "track_share_url": "https://www.musixmatch.com/lyrics/Machine-Gun-Kelly/Rap-Devil?utm_source=application&utm_campaign=api&utm_medium=N%2FA%3A1409618102067",
+          "track_edit_url": "https://www.musixmatch.com/lyrics/Machine-Gun-Kelly/Rap-Devil/edit?utm_source=application&utm_campaign=api&utm_medium=N%2FA%3A1409618102067",
+          "commontrack_vanity_id": "Machine-Gun-Kelly/Rap-Devil",
+          "restricted": 0,
+          "first_release_date": "2018-09-08T00:00:00Z",
+          "updated_time": "2018-09-21T13:39:30Z",
+          "primary_genres": {
+            "music_genre_list": [
+              {
+                "music_genre": {
+                  "music_genre_id": 18,
+                  "music_genre_parent_id": 34,
+                  "music_genre_name": "Hip Hop/Rap",
+                  "music_genre_name_extended": "Hip Hop/Rap",
+                  "music_genre_vanity": "Hip-Hop-Rap"
+                }
+              }
+            ]
+          },
+          "secondary_genres": {
+            "music_genre_list": []
+          }
+        }
+      }
+    }
+  }
+}

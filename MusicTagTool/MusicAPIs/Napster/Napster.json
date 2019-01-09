@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "totalCount": 3
+  },
+  "links": {
+    "self": "https://api.napster.com/search?q=Machine%20Gun%20Kelly%20-%20Rap%20Devil&include=genres&type=track&limit=1"
+  },
+  "data": [
+    {
+      "type": "track",
+      "id": "Tra.327933912",
+      "index": 1,
+      "disc": 1,
+      "href": "https://api.napster.com/v2.0/tracks/Tra.327933912",
+      "playbackSeconds": 286,
+      "explicit": true,
+      "isStreamable": true,
+      "name": "Rap Devil",
+      "isrc": "USUM71813833",
+      "shortcut": "machine-gun-kelly/rap-devil/rap-devil",
+      "blurbs": [],
+      "artistName": "MGK (Machine Gun Kelly)",
+      "albumName": "Rap Devil",
+      "formats": [
+        {
+          "type": "format",
+          "bitrate": 192,
+          "name": "AAC"
+        },
+        {
+          "type": "format",
+          "bitrate": 64,
+          "name": "AAC PLUS"
+        },
+        {
+          "type": "format",
+          "bitrate": 320,
+          "name": "AAC"
+        }
+      ],
+      "albumId": "Alb.327933911",
+      "contributors": {
+        "primaryArtist": "Art.31300083",
+        "engineer": "Art.31300083",
+        "remixer": "Art.40422590",
+        "producer": "Art.214517477",
+        "composer": "Art.263946275"
+      },
+      "links": {
+        "artists": {
+          "ids": [
+            "Art.31300083"
+          ],
+          "href": "https://api.napster.com/v2.0/artists/Art.31300083"
+        },
+        "albums": {
+          "ids": [
+            "Alb.327933911"
+          ],
+          "href": "https://api.napster.com/v2.0/albums/Alb.327933911"
+        },
+        "composers": {
+          "ids": [
+            "Art.263946275"
+          ],
+          "href": "https://api.napster.com/v2.0/artists/Art.263946275"
+        },
+        "genres": {
+          "ids": [
+            "g.309",
+            "g.146",
+            "g.115",
+            "g.112",
+            "g.71",
+            "g.408",
+            "g.136",
+            "g.220"
+          ],
+          "href": "https://api.napster.com/v2.0/genres/g.309,g.146,g.115,g.112,g.71,g.408,g.136,g.220"
+        },
+        "tags": {
+          "ids": [
+            "tag.152196519",
+            "tag.152196515",
+            "tag.152196495",
+            "tag.152196502",
+            "tag.152196543",
+            "tag.152196548"
+          ],
+          "href": "https://api.napster.com/v2.0/tags/tag.152196519,tag.152196515,tag.152196495,tag.152196502,tag.152196543,tag.152196548"
+        }
+      },
+      "previewURL": "http://listen.vo.llnwd.net/g3/5/7/3/1/2/1439821375.mp3",
+      "linked": {
+        "genres": [
+          {
+            "type": "genre",
+            "id": "g.309",
+            "name": "Midwestern Rap/Hip-Hop",
+            "href": "https://api.napster.com/v2.0/genres/g.309",
+            "shortcut": "rap-hip-hop/midwestern-rap-hip-hop"
+          },
+          {
+            "type": "genre",
+            "id": "g.146",
+            "name": "Rap/Hip-Hop",
+            "href": "https://api.napster.com/v2.0/genres/g.146",
+            "shortcut": "rap-hip-hop"
+          },
+          {
+            "type": "genre",
+            "id": "g.115",
+            "name": "Pop",
+            "href": "https://api.napster.com/v2.0/genres/g.115",
+            "shortcut": "pop"
+          },
+          {
+            "type": "genre",
+            "id": "g.112",
+            "name": "Hard Rock",
+            "href": "https://api.napster.com/v2.0/genres/g.112",
+            "shortcut": "rock/hard-rock"
+          },
+          {
+            "type": "genre",
+            "id": "g.71",
+            "name": "Electronic",
+            "href": "https://api.napster.com/v2.0/genres/g.71",
+            "shortcut": "electronica-dance"
+          },
+          {
+            "type": "genre",
+            "id": "g.408",
+            "name": "Tech-House",
+            "href": "https://api.napster.com/v2.0/genres/g.408",
+            "shortcut": "electronica-dance/house/tech-house"
+          },
+          {
+            "type": "genre",
+            "id": "g.136",
+            "name": "Techno",
+            "href": "https://api.napster.com/v2.0/genres/g.136",
+            "shortcut": "electronica-dance/techno"
+          },
+          {
+            "type": "genre",
+            "id": "g.220",
+            "name": "Dark Drum 'n' Bass",
+            "href": "https://api.napster.com/v2.0/genres/g.220",
+            "shortcut": "electronica-dance/jungle-drum-n-bass/dark-drum-n-bass"
+          }
+        ]
+      }
+    }
+  ]
+}

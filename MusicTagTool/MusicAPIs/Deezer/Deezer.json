@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": 551910242,
+      "readable": true,
+      "title": "RAP DEVIL",
+      "title_short": "RAP DEVIL",
+      "title_version": "",
+      "link": "http://www.deezer.com/track/551910242",
+      "duration": 286,
+      "rank": 384270,
+      "explicit_lyrics": true,
+      "preview": "http://cdn-preview-b.deezer.com/stream/c-bdadaa7fcaccd913ab9a1e42b022d9e0-4.mp3",
+      "artist": {
+        "id": 428675,
+        "name": "Machine Gun Kelly",
+        "link": "http://www.deezer.com/artist/428675",
+        "picture": "http://api.deezer.com/artist/428675/image",
+        "picture_small": "http://cdn-images.deezer.com/images/artist/24187bc19f74e945530e49ef11b2f691/56x56-000000-80-0-0.jpg",
+        "picture_medium": "http://cdn-images.deezer.com/images/artist/24187bc19f74e945530e49ef11b2f691/250x250-000000-80-0-0.jpg",
+        "picture_big": "http://cdn-images.deezer.com/images/artist/24187bc19f74e945530e49ef11b2f691/500x500-000000-80-0-0.jpg",
+        "picture_xl": "http://cdn-images.deezer.com/images/artist/24187bc19f74e945530e49ef11b2f691/1000x1000-000000-80-0-0.jpg",
+        "tracklist": "http://api.deezer.com/artist/428675/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": 72615132,
+        "title": "RAP DEVIL",
+        "cover": "http://api.deezer.com/album/72615132/image",
+        "cover_small": "http://cdn-images.deezer.com/images/cover/7a8dc2286c936ace5a4d1e8abb8060e0/56x56-000000-80-0-0.jpg",
+        "cover_medium": "http://cdn-images.deezer.com/images/cover/7a8dc2286c936ace5a4d1e8abb8060e0/250x250-000000-80-0-0.jpg",
+        "cover_big": "http://cdn-images.deezer.com/images/cover/7a8dc2286c936ace5a4d1e8abb8060e0/500x500-000000-80-0-0.jpg",
+        "cover_xl": "http://cdn-images.deezer.com/images/cover/7a8dc2286c936ace5a4d1e8abb8060e0/1000x1000-000000-80-0-0.jpg",
+        "tracklist": "http://api.deezer.com/album/72615132/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    }
+  ],
+  "total": 3,
+  "next": "http://api.deezer.com/search?q=artist%3A%22Machine%20Gun%20Kelly%22%20track%3A%22Rap%20Devil%22&limit=1&order=RANKING&index=1"
+}

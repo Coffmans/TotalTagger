@@ -1,0 +1,298 @@
+{
+  {
+    "meta": {
+      "status": 200
+    },
+    "response": {
+      "hits": [
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 52,
+            "api_path": "/songs/3937522",
+            "full_title": "RAP DEVIL by Machine Gun Kelly",
+            "header_image_thumbnail_url": "https://images.genius.com/a72fde5201db402b1b6453bb21e77d64.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/a72fde5201db402b1b6453bb21e77d64.1000x1000x1.jpg",
+            "id": 3937522,
+            "lyrics_owner_id": 321054,
+            "lyrics_state": "complete",
+            "path": "/Machine-gun-kelly-rap-devil-lyrics",
+            "pyongs_count": 287,
+            "song_art_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 0,
+              "concurrents": 10,
+              "pageviews": 2776724
+            },
+            "title": "RAP DEVIL",
+            "title_with_featured": "RAP DEVIL",
+            "url": "https://genius.com/Machine-gun-kelly-rap-devil-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/1665",
+              "header_image_url": "https://images.genius.com/935ea4f4a13ae827738d3892e32d0065.193x93x1.jpg",
+              "id": 1665,
+              "image_url": "https://images.genius.com/6a7ba9f284f19502cf719df6d7153c1d.720x720x1.jpg",
+              "is_meme_verified": true,
+              "is_verified": true,
+              "name": "Machine Gun Kelly",
+              "url": "https://genius.com/artists/Machine-gun-kelly",
+              "iq": 21719
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 33,
+            "api_path": "/songs/3938608",
+            "full_title": "Machine Gun Kelly - RAP DEVIL (Eminem Diss) [Türkçe Çeviri] by Genius Türkçe Çeviri",
+            "header_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.1000x1000x1.jpg",
+            "id": 3938608,
+            "lyrics_owner_id": 855745,
+            "lyrics_state": "complete",
+            "path": "/Genius-turkce-ceviri-machine-gun-kelly-rap-devil-eminem-diss-turkce-ceviri-lyrics",
+            "pyongs_count": 1,
+            "song_art_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 28,
+              "pageviews": 18653
+            },
+            "title": "Machine Gun Kelly - RAP DEVIL (Eminem Diss) [Türkçe Çeviri]",
+            "title_with_featured": "Machine Gun Kelly - RAP DEVIL (Eminem Diss) [Türkçe Çeviri]",
+            "url": "https://genius.com/Genius-turkce-ceviri-machine-gun-kelly-rap-devil-eminem-diss-turkce-ceviri-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/569121",
+              "header_image_url": "https://images.genius.com/887be16f52b0dec817adc23304662df0.900x176x1.jpg",
+              "id": 569121,
+              "image_url": "https://images.genius.com/11c4f2d5f797deeb76803bdb8a59424e.777x777x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Genius Türkçe Çeviri",
+              "url": "https://genius.com/artists/Genius-turkce-ceviri"
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 4,
+            "api_path": "/songs/3941327",
+            "full_title": "Machine Gun Kelly - RAP DEVIL (Traducción al Español) by Genius Traducciones al Español",
+            "header_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.1000x1000x1.jpg",
+            "id": 3941327,
+            "lyrics_owner_id": 4118964,
+            "lyrics_state": "complete",
+            "path": "/Genius-traducciones-al-espanol-machine-gun-kelly-rap-devil-traduccion-al-espanol-lyrics",
+            "pyongs_count": 1,
+            "song_art_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 0
+            },
+            "title": "Machine Gun Kelly - RAP DEVIL (Traducción al Español)",
+            "title_with_featured": "Machine Gun Kelly - RAP DEVIL (Traducción al Español)",
+            "url": "https://genius.com/Genius-traducciones-al-espanol-machine-gun-kelly-rap-devil-traduccion-al-espanol-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/1376254",
+              "header_image_url": "https://images.genius.com/7d33c884b750c3771caf79e147a50a55.1000x563x56.gif",
+              "id": 1376254,
+              "image_url": "https://images.genius.com/4095e191f58b38d70bb09ba3af668385.1000x1000x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Genius Traducciones al Español",
+              "url": "https://genius.com/artists/Genius-traducciones-al-espanol"
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 27,
+            "api_path": "/songs/3940840",
+            "full_title": "Machine Gun Kelly - Rap Devil (Tradução) by Genius Brasil Traduções",
+            "header_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.1000x1000x1.jpg",
+            "id": 3940840,
+            "lyrics_owner_id": 6771180,
+            "lyrics_state": "complete",
+            "path": "/Genius-brasil-traducoes-machine-gun-kelly-rap-devil-traducao-lyrics",
+            "pyongs_count": null,
+            "song_art_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 24
+            },
+            "title": "Machine Gun Kelly - Rap Devil (Tradução)",
+            "title_with_featured": "Machine Gun Kelly - Rap Devil (Tradução)",
+            "url": "https://genius.com/Genius-brasil-traducoes-machine-gun-kelly-rap-devil-traducao-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/210448",
+              "header_image_url": "https://images.genius.com/887be16f52b0dec817adc23304662df0.900x176x1.jpg",
+              "id": 210448,
+              "image_url": "https://images.genius.com/3a0be3346223ddde1f4b5c1d315cb9db.750x750x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Genius Brasil Traduções",
+              "url": "https://genius.com/artists/Genius-brasil-traducoes"
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 13,
+            "api_path": "/songs/3939769",
+            "full_title": "Machine Gun Kelly - Rap Devil (Traduction Française) by Genius Traductions Françaises",
+            "header_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.1000x1000x1.jpg",
+            "id": 3939769,
+            "lyrics_owner_id": 5243064,
+            "lyrics_state": "complete",
+            "path": "/Genius-traductions-francaises-machine-gun-kelly-rap-devil-traduction-francaise-lyrics",
+            "pyongs_count": 2,
+            "song_art_image_thumbnail_url": "https://images.genius.com/41105a400bd8c6b93f3cafaa8b034352.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 3,
+              "pageviews": 8315
+            },
+            "title": "Machine Gun Kelly - Rap Devil (Traduction Française)",
+            "title_with_featured": "Machine Gun Kelly - Rap Devil (Traduction Française)",
+            "url": "https://genius.com/Genius-traductions-francaises-machine-gun-kelly-rap-devil-traduction-francaise-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/140856",
+              "header_image_url": "https://images.genius.com/4526c8e93fe0fb881d2602d3d4971d00.1000x382x1.png",
+              "id": 140856,
+              "image_url": "https://images.genius.com/55b62a423405011d39eae7630c5d53f1.637x637x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Genius Traductions Françaises",
+              "url": "https://genius.com/artists/Genius-traductions-francaises"
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 0,
+            "api_path": "/songs/3941278",
+            "full_title": "Machine Gun Kelly - Rap Devil (Eminem Diss) [Italian Translation/ Traduzione Italiana] by Genius Translations",
+            "header_image_thumbnail_url": "https://images.genius.com/89c57c5ebf03ae0056e2adcfd0b64ea1.300x182x1.jpg",
+            "header_image_url": "https://images.genius.com/89c57c5ebf03ae0056e2adcfd0b64ea1.1000x607x1.jpg",
+            "id": 3941278,
+            "lyrics_owner_id": 3540787,
+            "lyrics_state": "complete",
+            "path": "/Genius-translations-machine-gun-kelly-rap-devil-eminem-diss-italian-translation-traduzione-italiana-lyrics",
+            "pyongs_count": null,
+            "song_art_image_thumbnail_url": "https://images.genius.com/c5378905c01dab0aee671105963cacf4.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 0
+            },
+            "title": "Machine Gun Kelly - Rap Devil (Eminem Diss) [Italian Translation/ Traduzione Italiana]",
+            "title_with_featured": "Machine Gun Kelly - Rap Devil (Eminem Diss) [Italian Translation/ Traduzione Italiana]",
+            "url": "https://genius.com/Genius-translations-machine-gun-kelly-rap-devil-eminem-diss-italian-translation-traduzione-italiana-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/1240266",
+              "header_image_url": "https://images.genius.com/7eeefc1f26d079efea65e0fe31971b2f.900x176x1.jpg",
+              "id": 1240266,
+              "image_url": "https://images.genius.com/d621467e52ec2b6fe5cb6d0a41846e69.1000x1000x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Genius Translations",
+              "url": "https://genius.com/artists/Genius-translations"
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 1,
+            "api_path": "/songs/3955314",
+            "full_title": "A's List: The Thirteenth Installment by Producer A",
+            "header_image_thumbnail_url": "https://images.genius.com/f55231b06d2eef1b1ceff8c5191850f5.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/f55231b06d2eef1b1ceff8c5191850f5.1000x1000x1.jpg",
+            "id": 3955314,
+            "lyrics_owner_id": 539850,
+            "lyrics_state": "complete",
+            "path": "/Producer-a-as-list-the-thirteenth-installment-lyrics",
+            "pyongs_count": null,
+            "song_art_image_thumbnail_url": "https://images.genius.com/f55231b06d2eef1b1ceff8c5191850f5.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 0
+            },
+            "title": "A's List: The Thirteenth Installment",
+            "title_with_featured": "A's List: The Thirteenth Installment",
+            "url": "https://genius.com/Producer-a-as-list-the-thirteenth-installment-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/1187986",
+              "header_image_url": "https://images.genius.com/52e219ebf75850f14a2e146adf74f845.630x1000x1.jpg",
+              "id": 1187986,
+              "image_url": "https://images.genius.com/6380ee09da89cb10665b63ce71157ee7.750x750x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Producer A",
+              "url": "https://genius.com/artists/Producer-a",
+              "iq": 91132
+            }
+          }
+        },
+        {
+          "highlights": [],
+          "index": "song",
+          "type": "song",
+          "result": {
+            "annotation_count": 4,
+            "api_path": "/songs/2820135",
+            "full_title": "Worldwide Choppers Big Remix (19 MC's) by Tech N9ne (Ft. Busta Rhymes, Ceza, Cory Gunz, DJ Death, DJ Drago, D-Loc the Gill God, Eminem, JL of B. Hood, Krayzie Bone, Krizz Kaliko, Ludacris, Machine Gun Kelly, Mac Lethal, Rittz, Twista, Twisted Insane, U$O, Wrekonize & Yelawolf)",
+            "header_image_thumbnail_url": "https://images.genius.com/4e0f0ecc4422bd2abdf6761d8303d312.300x300x1.jpg",
+            "header_image_url": "https://images.genius.com/4e0f0ecc4422bd2abdf6761d8303d312.313x313x1.jpg",
+            "id": 2820135,
+            "lyrics_owner_id": 2936651,
+            "lyrics_state": "complete",
+            "path": "/Tech-n9ne-worldwide-choppers-big-remix-19-mcs-lyrics",
+            "pyongs_count": 3,
+            "song_art_image_thumbnail_url": "https://images.genius.com/4e0f0ecc4422bd2abdf6761d8303d312.300x300x1.jpg",
+            "stats": {
+              "hot": false,
+              "unreviewed_annotations": 4
+            },
+            "title": "Worldwide Choppers Big Remix (19 MC's)",
+            "title_with_featured": "Worldwide Choppers Big Remix (19 MC's) (Ft. Busta Rhymes, Ceza, Cory Gunz, DJ Death, DJ Drago, D-Loc the Gill God, Eminem, JL of B. Hood, Krayzie Bone, Krizz Kaliko, Ludacris, Machine Gun Kelly, Mac Lethal, Rittz, Twista, Twisted Insane, U$O, Wrekonize & Yelawolf)",
+            "url": "https://genius.com/Tech-n9ne-worldwide-choppers-big-remix-19-mcs-lyrics",
+            "primary_artist": {
+              "api_path": "/artists/506",
+              "header_image_url": "https://images.genius.com/1cd52301aa960753a72020620ca518d0.1000x609x1.jpg",
+              "id": 506,
+              "image_url": "https://images.genius.com/ea417a62cc4e48aba86c9d2a626c952d.406x373x1.png",
+              "is_meme_verified": true,
+              "is_verified": true,
+              "name": "Tech N9ne",
+              "url": "https://genius.com/artists/Tech-n9ne",
+              "iq": 1545
+            }
+          }
+        }
+      ]
+    }
+  }
+}

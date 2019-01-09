@@ -1,0 +1,40 @@
+﻿<lfm status="ok">
+  <track>
+    <name>Talk To Me</name>
+    <url>https://www.last.fm/music/Tory+Lanez/_/Talk+To+Me</url>
+    <duration>184000</duration>
+    <streamable fulltrack="0">0</streamable>
+    <listeners>681</listeners>
+    <playcount>2289</playcount>
+    <artist>
+      <name>Tory Lanez</name>
+      <mbid>5b8ec72b-9e39-4a06-a2bf-964166b92a71</mbid>
+      <url>https://www.last.fm/music/Tory+Lanez</url>
+    </artist>
+    <album>
+      <artist>Tory Lanez</artist>
+      <title>Talk to Me - Single</title>
+      <url>
+        https://www.last.fm/music/Tory+Lanez/Talk+to+Me+-+Single
+      </url>
+      <image size="small">
+        https://lastfm-img2.akamaized.net/i/u/34s/432a1ede136b7c25bb44ee3534dd2a3a.png
+      </image>
+      <image size="medium">
+        https://lastfm-img2.akamaized.net/i/u/64s/432a1ede136b7c25bb44ee3534dd2a3a.png
+      </image>
+      <image size="large">
+        https://lastfm-img2.akamaized.net/i/u/174s/432a1ede136b7c25bb44ee3534dd2a3a.png
+      </image>
+      <image size="extralarge">
+        https://lastfm-img2.akamaized.net/i/u/300x300/432a1ede136b7c25bb44ee3534dd2a3a.png
+      </image>
+    </album>
+    <toptags>
+      <tag>
+        <name>played</name>
+        <url>https://www.last.fm/tag/played</url>
+      </tag>
+    </toptags>
+  </track>
+</lfm>

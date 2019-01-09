@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE3387B8-8128-4959-BC7B-38E53DE0C4E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TotalTagger</RootNamespace>
+    <AssemblyName>TotalTagger</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.3.29.16\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bass.Net">
+      <HintPath>bin\Release\Bass.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscogsClient, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscogsClient.2.3.0\lib\net461\DiscogsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MetaBrainz.MusicBrainz, Version=1.1.0.0, Culture=neutral, PublicKeyToken=be12cbb629c03021, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetaBrainz.MusicBrainz.1.1.2\lib\net45\MetaBrainz.MusicBrainz.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75b3c62967edc2a2, processorArchitecture=MSIL">
+      <HintPath>..\packages\OAuth.1.0.3\lib\net40\OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="ParkSquare.Gracenote, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ParkSquare.Gracenote.1.6.4\lib\net40\ParkSquare.Gracenote.dll</HintPath>
+    </Reference>
+    <Reference Include="RateLimiter, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RateLimiter.1.1.1\lib\net45\RateLimiter.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharpHelper, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharpHelper.1.1.1\lib\net461\RestSharpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="SpotifyAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpotifyAPI-NET.2.19.0\lib\SpotifyAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.6.0-preview.18571.3\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive, Version=4.1.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.1.2\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0-preview.18571.3\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.0-preview.18571.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unosquare.Labs.EmbedIO, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmbedIO.2.0.0\lib\net47\Unosquare.Labs.EmbedIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Unosquare.Swan.Lite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unosquare.Swan.Lite.0.36.1\lib\net452\Unosquare.Swan.Lite.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlbumCoverArtForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlbumCoverArtForm.Designer.cs">
+      <DependentUpon>AlbumCoverArtForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlbumSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlbumSearchForm.Designer.cs">
+      <DependentUpon>AlbumSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistAlbumsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtistAlbumsForm.Designer.cs">
+      <DependentUpon>ArtistAlbumsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASS\Bass.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="FindDuplicatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDuplicatesForm.Designer.cs">
+      <DependentUpon>FindDuplicatesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicAPIs\Galiboo.cs" />
+    <Compile Include="SearchServiceForAlbum.cs" />
+    <Compile Include="SearchServiceForArtwork.cs" />
+    <Compile Include="SearchServiceForMetadata.cs" />
+    <Compile Include="SingleLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingleLookupForm.Designer.cs">
+      <DependentUpon>SingleLookupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="ModifiedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MusicAPIs\Decibel.cs" />
+    <Compile Include="MusicAPIs\Deezer.cs" />
+    <Compile Include="MusicAPIs\Genius.cs" />
+    <Compile Include="MusicAPIs\ITunes.cs" />
+    <Compile Include="MusicAPIs\MusixMatch.cs" />
+    <Compile Include="MusicAPIs\Napster.cs" />
+    <Compile Include="MusicAPIs\Spotify.cs" />
+    <Compile Include="ReadWriteID3.cs" />
+    <Compile Include="MusicAPIs\AudioDB.cs" />
+    <Compile Include="MusicAPIs\Discogs.cs" />
+    <Compile Include="DisplayMetadataOnAllMatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayMetadataOnAllMatches.Designer.cs">
+      <DependentUpon>DisplayMetadataOnAllMatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadArtwork.cs" />
+    <Compile Include="MusicAPIs\GraceNote.cs" />
+    <Compile Include="MusicAPIs\LastFM.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicAPIs\MusicBrainz.cs" />
+    <Compile Include="MusicAPIs\MusicStory.cs" />
+    <Compile Include="MusicAPIs\TagService.cs" />
+    <Compile Include="MusicAPIs\Rovi.cs" />
+    <Compile Include="MusicMetadata.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleLookup.cs" />
+    <Compile Include="TaggingTool.cs">
+      <DependentUpon>TaggingTool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaggingTool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaggingTool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\HttpRequestClass.cs" />
+    <EmbeddedResource Include="AlbumCoverArtForm.resx">
+      <DependentUpon>AlbumCoverArtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlbumSearchForm.resx">
+      <DependentUpon>AlbumSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistAlbumsForm.resx">
+      <DependentUpon>ArtistAlbumsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDuplicatesForm.resx">
+      <DependentUpon>FindDuplicatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleLookupForm.resx">
+      <DependentUpon>SingleLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayMetadataOnAllMatches.resx">
+      <DependentUpon>DisplayMetadataOnAllMatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MusicAPIs\Deezer\Deezer.json" />
+    <None Include="MusicAPIs\Genius\Genius.json" />
+    <None Include="MusicAPIs\Genius\GeniusTrack.json" />
+    <None Include="MusicAPIs\iTunes\iTunes.json" />
+    <None Include="MusicAPIs\LastFM\LastFM.json" />
+    <None Include="MusicAPIs\LastFM\LastFMArtistTopAlbums.json" />
+    <None Include="MusicAPIs\LastFM\LastFMTrackGetInfo.json" />
+    <None Include="MusicAPIs\MusixMatch\MusixMatch.json" />
+    <None Include="MusicAPIs\Napster\Napster.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TaggingTool.xsc">
+      <DependentUpon>TaggingTool.xsd</DependentUpon>
+    </None>
+    <None Include="TaggingTool.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaggingTool.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TaggingTool.xss">
+      <DependentUpon>TaggingTool.xsd</DependentUpon>
+    </None>
+    <None Include="MusicAPIs\AudioDB\TheAudioDB.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\blank.png" />
+    <EmbeddedResource Include="Images\find.png" />
+    <EmbeddedResource Include="Images\logo.ico" />
+    <EmbeddedResource Include="Images\lookup.png" />
+    <None Include="MusicAPIs\LastFM\LastFMTrackSearchTitleAndArtist.xml" />
+    <None Include="MusicAPIs\LastFM\LastFMTrackSearchTitleOnly.xml" />
+    <None Include="MusicAPIs\MusicBrainz\MusicBrainz.xml" />
+    <None Include="MusicAPIs\MusicBrainz\MusicBrainzGetAlbum.xml" />
+    <None Include="Readme.txt" />
+    <None Include="Resources\Lookup.png" />
+    <None Include="Resources\Settings.ico" />
+    <EmbeddedResource Include="Images\question_mark.png" />
+    <EmbeddedResource Include="Images\red_x.png" />
+    <EmbeddedResource Include="Images\check_mark_T.png">
+      <Generator>CheckMark</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genres.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MusicAPIs\Discogs\" />
+    <Folder Include="MusicAPIs\GraceNote\" />
+    <Folder Include="MusicAPIs\MusicStory\" />
+    <Folder Include="MusicAPIs\Rovi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

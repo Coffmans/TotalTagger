@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Genres>
+<Genre><Name>Acoustic Folk</Name></Genre>
+<Genre><Name>Acoustic General</Name></Genre>
+<Genre><Name>Acoustic Guitar</Name></Genre>
+<Genre><Name>Acoustic Piano</Name></Genre>
+<Genre><Name>Acoustic Rock</Name></Genre>
+<Genre><Name>Acoustic Vocals</Name></Genre>
+<Genre><Name>Cover Songs</Name></Genre>
+<Genre><Name>Folk</Name></Genre>
+<Genre><Name>Alt Power Pop</Name></Genre>
+<Genre><Name>Alternative General</Name></Genre>
+<Genre><Name>Avant Rock</Name></Genre>
+<Genre><Name>Brit Pop</Name></Genre>
+<Genre><Name>Cover Songs</Name></Genre>
+<Genre><Name>Dance-Punk</Name></Genre>
+<Genre><Name>Emo</Name></Genre>
+<Genre><Name>Experimental</Name></Genre>
+<Genre><Name>Goth</Name></Genre>
+<Genre><Name>Grunge</Name></Genre>
+<Genre><Name>Indie</Name></Genre>
+<Genre><Name>Nu Metal</Name></Genre>
+<Genre><Name>Other Alternative</Name></Genre>
+<Genre><Name>Pop Punk</Name></Genre>
+<Genre><Name>Post Punk</Name></Genre>
+<Genre><Name>Shoegaze</Name></Genre>
+<Genre><Name>Ska</Name></Genre>
+<Genre><Name>Acoustic Blues</Name></Genre>
+<Genre><Name>Blues General</Name></Genre>
+<Genre><Name>Blues Rock</Name></Genre>
+<Genre><Name>Country Blues</Name></Genre>
+<Genre><Name>Cover Songs</Name></Genre>
+<Genre><Name>Electric Blues</Name></Genre>
+<Genre><Name>Jump Blues</Name></Genre>
+<Genre><Name>Straight Ahead Blues</Name></Genre>
+<Genre><Name>Baroque</Name></Genre>
+<Genre><Name>Chamber Music</Name></Genre>
+<Genre><Name>Choral</Name></Genre>
+<Genre><Name>Classical General</Name></Genre>
+<Genre><Name>Contemporary</Name></Genre>
+<Genre><Name>Ensembles</Name></Genre>
+<Genre><Name>Medieval</Name></Genre>
+<Genre><Name>Opera</Name></Genre>
+<Genre><Name>Renaissance</Name></Genre>
+<Genre><Name>Symphonic</Name></Genre>
+<Genre><Name>Adult Comedy</Name></Genre>
+<Genre><Name>General Comedy</Name></Genre>
+<Genre><Name>On Stage</Name></Genre>
+<Genre><Name>Parody</Name></Genre>
+<Genre><Name>Political Humor</Name></Genre>
+<Genre><Name>Prank Calls</Name></Genre>
+<Genre><Name>Alternative Country</Name></Genre>
+<Genre><Name>Americana</Name></Genre>
+<Genre><Name>Bluegrass</Name></Genre>
+<Genre><Name>Cajun/Zydeco</Name></Genre>
+<Genre><Name>Christian Country</Name></Genre>
+<Genre><Name>Country and Western</Name></Genre>
+<Genre><Name>Country General</Name></Genre>
+<Genre><Name>Country Swing</Name></Genre>
+<Genre><Name>Country-Pop</Name></Genre>
+<Genre><Name>Country-Rock</Name></Genre>
+<Genre><Name>Cover Songs</Name></Genre>
+<Genre><Name>Honky-Tonk</Name></Genre>
+<Genre><Name>Rockabilly</Name></Genre>
+<Genre><Name>Traditional Country</Name></Genre>
+<Genre><Name>Electronic</Name></Genre>
+<Genre><Name>Acid</Name></Genre>
+<Genre><Name>Ambient</Name></Genre>
+<Genre><Name>Big Beat</Name></Genre>
+<Genre><Name>Breakbeat</Name></Genre>
+<Genre><Name>Chiptune</Name></Genre>
+<Genre><Name>Dance</Name></Genre>
+<Genre><Name>Drum n Bass</Name></Genre>
+<Genre><Name>Dubstep</Name></Genre>
+<Genre><Name>EDM</Name></Genre>
+<Genre><Name>Electro</Name></Genre>
+<Genre><Name>Electronica</Name></Genre>
+<Genre><Name>Euro</Name></Genre>
+<Genre><Name>Experimental Sounds</Name></Genre>
+<Genre><Name>Games Soundtrack</Name></Genre>
+<Genre><Name>Happy Hardcore</Name></Genre>
+<Genre><Name>House</Name></Genre>
+<Genre><Name>IDM</Name></Genre>
+<Genre><Name>Indietronic</Name></Genre>
+<Genre><Name>Industrial</Name></Genre>
+<Genre><Name>Jungle</Name></Genre>
+<Genre><Name>Mellow</Name></Genre>
+<Genre><Name>Minimal</Name></Genre>
+<Genre><Name>Noise</Name></Genre>
+<Genre><Name>Techno</Name></Genre>
+<Genre><Name>Techno Hardcore</Name></Genre>
+<Genre><Name>Trance</Name></Genre>
+<Genre><Name>Tribal</Name></Genre>
+<Genre><Name>Trip Hop</Name></Genre>
+<Genre><Name>HipHop</Name></Genre>
+<Genre><Name>Alternative Hip Hop</Name></Genre>
+<Genre><Name>Bass Rap</Name></Genre>
+<Genre><Name>Battles/Disses</Name></Genre>
+<Genre><Name>Christian Rap</Name></Genre>
+<Genre><Name>Freestyle</Name></Genre>
+<Genre><Name>Grime</Name></Genre>
+<Genre><Name>Hardcore Rap</Name></Genre>
+<Genre><Name>Hip Hop - Asian</Name></Genre>
+<Genre><Name>Hip Hop - Dutch</Name></Genre>
+<Genre><Name>Hip Hop - German</Name></Genre>
+<Genre><Name>Hip Hop General</Name></Genre>
+<Genre><Name>Hyphy</Name></Genre>
+<Genre><Name>Nerdcore</Name></Genre>
+<Genre><Name>New School</Name></Genre>
+<Genre><Name>Old School</Name></Genre>
+<Genre><Name>Positive Vibes</Name></Genre>
+<Genre><Name>Spoken Word</Name></Genre>
+<Genre><Name>Instrumentals</Name></Genre>
+<Genre><Name>Beats General</Name></Genre>
+<Genre><Name>Classical</Name></Genre>
+<Genre><Name>Club Bangas</Name></Genre>
+<Genre><Name>Cover Songs</Name></Genre>
+<Genre><Name>Crunk</Name></Genre>
+<Genre><Name>Dance amp; Electronic</Name></Genre>
+<Genre><Name>Dirty South</Name></Genre>
+<Genre><Name>East Coast</Name></Genre>
+<Genre><Name>EDM Instrumental</Name></Genre>
+<Genre><Name>Electro-hop</Name></Genre>
+<Genre><Name>Film Music</Name></Genre>
+<Genre><Name>Funk</Name></Genre>
+<Genre><Name>Game amp; Soundtrack</Name></Genre>
+<Genre><Name>Gangsta</Name></Genre>
+<Genre><Name>Gospel Instrumentals</Name></Genre>
+<Genre><Name>Hardcore</Name></Genre>
+<Genre><Name>Hip Hop</Name></Genre>
+<Genre><Name>Instrumentals with Hooks</Name></Genre>
+<Genre><Name>Jazzy Beats</Name></Genre>
+<Genre><Name>Miami Bass</Name></Genre>
+<Genre><Name>Mid West</Name></Genre>
+<Genre><Name>New School</Name></Genre>
+<Genre><Name>Old School</Name></Genre>
+<Genre><Name>Reggae Beats</Name></Genre>
+<Genre><Name>Reggaeton</Name></Genre>
+<Genre><Name>Rock</Name></Genre>
+<Genre><Name>Scratch</Name></Genre>
+<Genre><Name>Smooth</Name></Genre>
+<Genre><Name>Trap</Name></Genre>
+<Genre><Name>West Coast</Name></Genre>
+<Genre><Name>Acid Jazz</Name></Genre>
+<Genre><Name>Bebop</Name></Genre>
+<Genre><Name>Dixieland</Name></Genre>
+<Genre><Name>Free Jazz</Name></Genre>
+<Genre><Name>Jazz Fusion</Name></Genre>
+<Genre><Name>Jazz General</Name></Genre>
+<Genre><Name>Jazz Vocals</Name></Genre>
+<Genre><Name>Lounge</Name></Genre>
+<Genre><Name>Modern Jazz</Name></Genre>
+<Genre><Name>Nu Jazz</Name></Genre>
+<Genre><Name>Smooth Jazz</Name></Genre>
+<Genre><Name>Swing</Name></Genre>
+<Genre><Name>Bossa Nova</Name></Genre>
+<Genre><Name>Cover Songs</Name></Genre>
+<Genre><Name>Cuban</Name></Genre>
+<Genre><Name>Flamenco</Name></Genre>
+<Genre><Name>General Latin</Name></Genre>
+<Genre><Name>Latin Jazz</Name></Genre>
+<Genre><Name>Mariachi</Name></Genre>
+<Genre><Name>Merengue</Name></Genre>
+<Genre><Name>Pop/Balada</Name></Genre>
+<Genre><Name>Reggaeton</Name></Genre>
+<Genre><Name>Salsa</Name></Genre>
+<Genre><Name>Samba</Name></Genre>
+<Genre><Name>Tango</Name></Genre>
+<Genre><Name>Alternative Metal</Name></Genre>
+<Genre><Name>Death/Black Metal</Name></Genre>
+<Genre><Name>Doom Metal</Name></Genre>
+<Genre><Name>Goth Metal</Name></Genre>
+<Genre><Name>Heavy Metal</Name></Genre>
+<Genre><Name>Industrial Metal</Name></Genre>
+<Genre><Name>Metal Riffs and Licks</Name></Genre>
+<Genre><Name>Power Metal</Name></Genre>
+<Genre><Name>Progressive Metal</Name></Genre>
+<Genre><Name>Rap-Metal</Name></Genre>
+<Genre><Name>Thrash Metal</Name></Genre>
+<Genre><Name>Adult Contemporary</Name></Genre>
+<Genre><Name>Beach</Name></Genre>
+<Genre><Name>Christmas/Seasonal</Name></Genre>
+<Genre><Name>Contemporary Christian</Name></Genre>
+<Genre><Name>Contemporary Gospel</Name></Genre>
+<Genre><Name>Euro Pop</Name></Genre>
+<Genre><Name>J-Pop</Name></Genre>
+<Genre><Name>Musical</Name></Genre>
+<Genre><Name>Pop General</Name></Genre>
+<Genre><Name>Pop Rock</Name></Genre>
+<Genre><Name>Power Pop</Name></Genre>
+<Genre><Name>Christian Rock</Name></Genre>
+<Genre><Name>Classic Rock</Name></Genre>
+<Genre><Name>Folk Rock</Name></Genre>
+<Genre><Name>Garage Rock</Name></Genre>
+<Genre><Name>Goth Rock</Name></Genre>
+<Genre><Name>Guitar Rock</Name></Genre>
+<Genre><Name>Hard Rock</Name></Genre>
+<Genre><Name>Instrumental Rock</Name></Genre>
+<Genre><Name>Progressive Rock</Name></Genre>
+<Genre><Name>Psychedelic Rock</Name></Genre>
+<Genre><Name>Punk</Name></Genre>
+<Genre><Name>Riffs and Licks</Name></Genre>
+<Genre><Name>Rock En Espanol</Name></Genre>
+<Genre><Name>Rock General</Name></Genre>
+<Genre><Name>Rock n Roll</Name></Genre>
+<Genre><Name>Rock Unplugged</Name></Genre>
+<Genre><Name>Southern Rock</Name></Genre>
+<Genre><Name>Surf Rock</Name></Genre>
+<Genre><Name>Audio Blog</Name></Genre>
+<Genre><Name>Fictional Stories</Name></Genre>
+<Genre><Name>Music Talk</Name></Genre>
+<Genre><Name>Poetry</Name></Genre>
+<Genre><Name>Politics</Name></Genre>
+<Genre><Name>Religious</Name></Genre>
+<Genre><Name>Sports</Name></Genre>
+<Genre><Name>Talk</Name></Genre>
+<Genre><Name>Funk</Name></Genre>
+<Genre><Name>Funky Ramp;B</Name></Genre>
+<Genre><Name>Gospel</Name></Genre>
+<Genre><Name>Neo-Soul</Name></Genre>
+<Genre><Name>Ramp;B/Soul/Pop</Name></Genre>
+<Genre><Name>Smooth Ramp;B</Name></Genre>
+<Genre><Name>Soul</Name></Genre>
+<Genre><Name>World</Name></Genre>
+<Genre><Name>Dancehall</Name></Genre>
+<Genre><Name>Dub</Name></Genre>
+<Genre><Name>Native American</Name></Genre>
+<Genre><Name>New Age</Name></Genre>
+<Genre><Name>Reggae</Name></Genre>
+<Genre><Name>Blues</Name></Genre>
+<Genre><Name>Classic Rock</Name></Genre>
+<Genre><Name>Country</Name></Genre>
+<Genre><Name>Dance</Name></Genre>
+<Genre><Name>Disco</Name></Genre>
+<Genre><Name>Funk</Name></Genre>
+<Genre><Name>Grunge</Name></Genre>
+<Genre><Name>Hip-Hop</Name></Genre>
+<Genre><Name>Jazz</Name></Genre>
+<Genre><Name>Metal</Name></Genre>
+<Genre><Name>New Age</Name></Genre>
+<Genre><Name>Oldies</Name></Genre>
+<Genre><Name>Other</Name></Genre>
+<Genre><Name>Pop</Name></Genre>
+<Genre><Name>Ramp;B</Name></Genre>
+<Genre><Name>Rap</Name></Genre>
+<Genre><Name>Reggae</Name></Genre>
+<Genre><Name>Rock</Name></Genre>
+<Genre><Name>Techno</Name></Genre>
+<Genre><Name>Industrial</Name></Genre>
+<Genre><Name>Alternative</Name></Genre>
+<Genre><Name>Ska</Name></Genre>
+<Genre><Name>Death Metal</Name></Genre>
+<Genre><Name>Pranks</Name></Genre>
+<Genre><Name>Soundtrack</Name></Genre>
+<Genre><Name>Euro-Techno</Name></Genre>
+<Genre><Name>Ambient</Name></Genre>
+<Genre><Name>Trip-Hop</Name></Genre>
+<Genre><Name>Vocal</Name></Genre>
+<Genre><Name>Jazz+Funk</Name></Genre>
+<Genre><Name>Fusion</Name></Genre>
+<Genre><Name>Trance</Name></Genre>
+<Genre><Name>Classical</Name></Genre>
+<Genre><Name>Instrumental</Name></Genre>
+<Genre><Name>Acid</Name></Genre>
+<Genre><Name>House</Name></Genre>
+<Genre><Name>Game</Name></Genre>
+<Genre><Name>Sound Clip</Name></Genre>
+<Genre><Name>Gospel</Name></Genre>
+<Genre><Name>Noise</Name></Genre>
+<Genre><Name>AlternRock</Name></Genre>
+<Genre><Name>Bass</Name></Genre>
+<Genre><Name>Soul</Name></Genre>
+<Genre><Name>Punk</Name></Genre>
+<Genre><Name>Space</Name></Genre>
+<Genre><Name>Meditative</Name></Genre>
+<Genre><Name>Instrumental Pop</Name></Genre>
+<Genre><Name>Instrumental Rock</Name></Genre>
+<Genre><Name>Ethnic</Name></Genre>
+<Genre><Name>Gothic</Name></Genre>
+<Genre><Name>Darkwave</Name></Genre>
+<Genre><Name>Techno-Industrial</Name></Genre>
+<Genre><Name>Electronic</Name></Genre>
+<Genre><Name>Pop-Folk</Name></Genre>
+<Genre><Name>Eurodance</Name></Genre>
+<Genre><Name>Dream</Name></Genre>
+<Genre><Name>Southern Rock</Name></Genre>
+<Genre><Name>Comedy</Name></Genre>
+<Genre><Name>Cult</Name></Genre>
+<Genre><Name>Gangsta</Name></Genre>
+<Genre><Name>Top 40</Name></Genre>
+<Genre><Name>Christian Rap</Name></Genre>
+<Genre><Name>Pop/Funk</Name></Genre>
+<Genre><Name>Jungle</Name></Genre>
+<Genre><Name>Native American</Name></Genre>
+<Genre><Name>Cabaret</Name></Genre>
+<Genre><Name>New Wave</Name></Genre>
+<Genre><Name>Psychadelic</Name></Genre>
+<Genre><Name>Rave</Name></Genre>
+<Genre><Name>Showtunes</Name></Genre>
+<Genre><Name>Trailer</Name></Genre>
+<Genre><Name>Lo-Fi</Name></Genre>
+<Genre><Name>Tribal</Name></Genre>
+<Genre><Name>Acid Punk</Name></Genre>
+<Genre><Name>Acid Jazz</Name></Genre>
+<Genre><Name>Polka</Name></Genre>
+<Genre><Name>Retro</Name></Genre>
+<Genre><Name>Musical</Name></Genre>
+<Genre><Name>Rock amp; Roll</Name></Genre>
+<Genre><Name>Hard Rock</Name></Genre>
+<Genre><Name>Folk</Name></Genre>
+<Genre><Name>National Folk</Name></Genre>
+<Genre><Name>Swing</Name></Genre>
+<Genre><Name>Fast Fusion</Name></Genre>
+<Genre><Name>Latin</Name></Genre>
+<Genre><Name>Revival</Name></Genre>
+<Genre><Name>Celtic</Name></Genre>
+<Genre><Name>Bluegrass</Name></Genre>
+<Genre><Name>Avantgarde</Name></Genre>
+<Genre><Name>Gothic Rock</Name></Genre>
+<Genre><Name>Progressive Rock</Name></Genre>
+<Genre><Name>Psychedelic Rock</Name></Genre>
+<Genre><Name>Symphonic Rock</Name></Genre>
+<Genre><Name>Slow Rock</Name></Genre>
+<Genre><Name>Big Band</Name></Genre>
+<Genre><Name>Chorus</Name></Genre>
+<Genre><Name>Easy Listening</Name></Genre>
+<Genre><Name>Acoustic</Name></Genre>
+<Genre><Name>Humour</Name></Genre>
+<Genre><Name>Speech</Name></Genre>
+<Genre><Name>Chanson</Name></Genre>
+<Genre><Name>Opera</Name></Genre>
+<Genre><Name>Chamber Music</Name></Genre>
+<Genre><Name>Sonata</Name></Genre>
+<Genre><Name>Symphony</Name></Genre>
+<Genre><Name>Booty Bass</Name></Genre>
+<Genre><Name>Primus</Name></Genre>
+<Genre><Name>Porn Groove</Name></Genre>b
+<Genre><Name>Satire</Name></Genre>
+<Genre><Name>Slow Jam</Name></Genre>
+<Genre><Name>Club</Name></Genre>
+<Genre><Name>Tango</Name></Genre>
+<Genre><Name>Samba</Name></Genre>
+<Genre><Name>Folklore</Name></Genre>
+<Genre><Name>Ballad</Name></Genre>
+<Genre><Name>Power Ballad</Name></Genre>
+<Genre><Name>Rhythmic Soul</Name></Genre>
+<Genre><Name>Freestyle</Name></Genre>
+<Genre><Name>Duet</Name></Genre>
+<Genre><Name>Punk Rock</Name></Genre>
+<Genre><Name>Drum Solo</Name></Genre>
+<Genre><Name>A capella</Name></Genre>
+<Genre><Name>Euro-House</Name></Genre>
+<Genre><Name>Dance Hall</Name></Genre>
+<Genre><Name>Adult Contemporary</Name></Genre>
+<Genre><Name>Dance Hall</Name></Genre>
+<Genre><Name>Original Film/TV</Name></Genre>
+<Genre><Name>Western Pop</Name></Genre>
+<Genre><Name>Mainstream Rock</Name></Genre>
+</Genres>
