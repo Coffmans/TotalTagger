@@ -87,6 +87,13 @@
             this.btnRefreshList = new System.Windows.Forms.Button();
             this.btnCopyOldToNew = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.chkTransferTitle = new System.Windows.Forms.CheckBox();
+            this.chkTransferArtist = new System.Windows.Forms.CheckBox();
+            this.chkTransferAlbum = new System.Windows.Forms.CheckBox();
+            this.chkTransferGenre = new System.Windows.Forms.CheckBox();
+            this.chkTransferDate = new System.Windows.Forms.CheckBox();
+            this.chkTransferArt = new System.Windows.Forms.CheckBox();
+            this.chkAll = new System.Windows.Forms.CheckBox();
             this.playProgressBar = new TotalTagger.ModifiedProgressBarSeek();
             this.contextMenuStripGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSongFiles)).BeginInit();
@@ -161,9 +168,9 @@
             // 
             // picID3AlbumArt
             // 
-            this.picID3AlbumArt.Location = new System.Drawing.Point(366, 485);
+            this.picID3AlbumArt.Location = new System.Drawing.Point(389, 484);
             this.picID3AlbumArt.Name = "picID3AlbumArt";
-            this.picID3AlbumArt.Size = new System.Drawing.Size(292, 172);
+            this.picID3AlbumArt.Size = new System.Drawing.Size(272, 172);
             this.picID3AlbumArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picID3AlbumArt.TabIndex = 5;
             this.picID3AlbumArt.TabStop = false;
@@ -318,12 +325,13 @@
             // 
             // picNewAlbumArt
             // 
-            this.picNewAlbumArt.Location = new System.Drawing.Point(1120, 485);
+            this.picNewAlbumArt.Location = new System.Drawing.Point(1125, 485);
             this.picNewAlbumArt.Name = "picNewAlbumArt";
-            this.picNewAlbumArt.Size = new System.Drawing.Size(292, 172);
+            this.picNewAlbumArt.Size = new System.Drawing.Size(272, 172);
             this.picNewAlbumArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picNewAlbumArt.TabIndex = 17;
             this.picNewAlbumArt.TabStop = false;
+            this.picNewAlbumArt.Click += new System.EventHandler(this.PicNewAlbumArt_Click);
             // 
             // label11
             // 
@@ -581,7 +589,7 @@
             this.btnStop.FlatAppearance.BorderSize = 0;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.Image")));
-            this.btnStop.Location = new System.Drawing.Point(1241, 21);
+            this.btnStop.Location = new System.Drawing.Point(1227, 21);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(43, 45);
             this.btnStop.TabIndex = 14;
@@ -594,7 +602,7 @@
             this.btnPause.FlatAppearance.BorderSize = 0;
             this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPause.Image = ((System.Drawing.Image)(resources.GetObject("btnPause.Image")));
-            this.btnPause.Location = new System.Drawing.Point(1201, 21);
+            this.btnPause.Location = new System.Drawing.Point(1187, 21);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(43, 45);
             this.btnPause.TabIndex = 13;
@@ -607,7 +615,7 @@
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
-            this.btnPlay.Location = new System.Drawing.Point(1163, 21);
+            this.btnPlay.Location = new System.Drawing.Point(1149, 21);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(43, 45);
             this.btnPlay.TabIndex = 12;
@@ -658,9 +666,9 @@
             // btnCopyOldToNew
             // 
             this.btnCopyOldToNew.Image = ((System.Drawing.Image)(resources.GetObject("btnCopyOldToNew.Image")));
-            this.btnCopyOldToNew.Location = new System.Drawing.Point(678, 485);
+            this.btnCopyOldToNew.Location = new System.Drawing.Point(697, 485);
             this.btnCopyOldToNew.Name = "btnCopyOldToNew";
-            this.btnCopyOldToNew.Size = new System.Drawing.Size(63, 123);
+            this.btnCopyOldToNew.Size = new System.Drawing.Size(49, 171);
             this.btnCopyOldToNew.TabIndex = 27;
             this.btnCopyOldToNew.UseVisualStyleBackColor = true;
             this.btnCopyOldToNew.Click += new System.EventHandler(this.BtnCopyOldToNew_Click);
@@ -678,12 +686,76 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click_1);
             // 
+            // chkTransferTitle
+            // 
+            this.chkTransferTitle.AutoSize = true;
+            this.chkTransferTitle.Location = new System.Drawing.Point(366, 511);
+            this.chkTransferTitle.Name = "chkTransferTitle";
+            this.chkTransferTitle.Size = new System.Drawing.Size(15, 14);
+            this.chkTransferTitle.TabIndex = 98;
+            this.chkTransferTitle.UseVisualStyleBackColor = true;
+            // 
+            // chkTransferArtist
+            // 
+            this.chkTransferArtist.AutoSize = true;
+            this.chkTransferArtist.Location = new System.Drawing.Point(366, 531);
+            this.chkTransferArtist.Name = "chkTransferArtist";
+            this.chkTransferArtist.Size = new System.Drawing.Size(15, 14);
+            this.chkTransferArtist.TabIndex = 99;
+            this.chkTransferArtist.UseVisualStyleBackColor = true;
+            // 
+            // chkTransferAlbum
+            // 
+            this.chkTransferAlbum.AutoSize = true;
+            this.chkTransferAlbum.Location = new System.Drawing.Point(366, 551);
+            this.chkTransferAlbum.Name = "chkTransferAlbum";
+            this.chkTransferAlbum.Size = new System.Drawing.Size(15, 14);
+            this.chkTransferAlbum.TabIndex = 100;
+            this.chkTransferAlbum.UseVisualStyleBackColor = true;
+            // 
+            // chkTransferGenre
+            // 
+            this.chkTransferGenre.AutoSize = true;
+            this.chkTransferGenre.Location = new System.Drawing.Point(366, 571);
+            this.chkTransferGenre.Name = "chkTransferGenre";
+            this.chkTransferGenre.Size = new System.Drawing.Size(15, 14);
+            this.chkTransferGenre.TabIndex = 101;
+            this.chkTransferGenre.UseVisualStyleBackColor = true;
+            // 
+            // chkTransferDate
+            // 
+            this.chkTransferDate.AutoSize = true;
+            this.chkTransferDate.Location = new System.Drawing.Point(366, 591);
+            this.chkTransferDate.Name = "chkTransferDate";
+            this.chkTransferDate.Size = new System.Drawing.Size(15, 14);
+            this.chkTransferDate.TabIndex = 102;
+            this.chkTransferDate.UseVisualStyleBackColor = true;
+            // 
+            // chkTransferArt
+            // 
+            this.chkTransferArt.AutoSize = true;
+            this.chkTransferArt.Location = new System.Drawing.Point(667, 554);
+            this.chkTransferArt.Name = "chkTransferArt";
+            this.chkTransferArt.Size = new System.Drawing.Size(15, 14);
+            this.chkTransferArt.TabIndex = 103;
+            this.chkTransferArt.UseVisualStyleBackColor = true;
+            // 
+            // chkAll
+            // 
+            this.chkAll.AutoSize = true;
+            this.chkAll.Location = new System.Drawing.Point(366, 488);
+            this.chkAll.Name = "chkAll";
+            this.chkAll.Size = new System.Drawing.Size(15, 14);
+            this.chkAll.TabIndex = 104;
+            this.chkAll.UseVisualStyleBackColor = true;
+            this.chkAll.CheckedChanged += new System.EventHandler(this.ChkAll_CheckedChanged);
+            // 
             // playProgressBar
             // 
             this.playProgressBar.BackColor = System.Drawing.SystemColors.Control;
-            this.playProgressBar.Location = new System.Drawing.Point(1291, 29);
+            this.playProgressBar.Location = new System.Drawing.Point(1276, 29);
             this.playProgressBar.Name = "playProgressBar";
-            this.playProgressBar.Size = new System.Drawing.Size(172, 28);
+            this.playProgressBar.Size = new System.Drawing.Size(187, 28);
             this.playProgressBar.TabIndex = 15;
             // 
             // MainWindow
@@ -691,6 +763,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 669);
+            this.Controls.Add(this.chkAll);
+            this.Controls.Add(this.chkTransferArt);
+            this.Controls.Add(this.chkTransferDate);
+            this.Controls.Add(this.chkTransferGenre);
+            this.Controls.Add(this.chkTransferAlbum);
+            this.Controls.Add(this.chkTransferArtist);
+            this.Controls.Add(this.chkTransferTitle);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnCopyOldToNew);
             this.Controls.Add(this.btnRefreshList);
@@ -815,6 +894,13 @@
         private System.Windows.Forms.Button btnRefreshList;
         private System.Windows.Forms.Button btnCopyOldToNew;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.CheckBox chkTransferTitle;
+        private System.Windows.Forms.CheckBox chkTransferArtist;
+        private System.Windows.Forms.CheckBox chkTransferAlbum;
+        private System.Windows.Forms.CheckBox chkTransferGenre;
+        private System.Windows.Forms.CheckBox chkTransferDate;
+        private System.Windows.Forms.CheckBox chkTransferArt;
+        private System.Windows.Forms.CheckBox chkAll;
     }
 }
 

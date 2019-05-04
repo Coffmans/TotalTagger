@@ -311,6 +311,8 @@ namespace TotalTagger
                 }
             }
 
+            chkTransferArt.Visible = false;
+
 #endif
         }
 
@@ -1336,6 +1338,7 @@ namespace TotalTagger
         {
             picID3AlbumArt.Image = null;
             picID3AlbumArt.ImageLocation = "";
+            chkTransferArt.Visible = false;
         }
 
         #region UnusedCode
@@ -1478,6 +1481,7 @@ namespace TotalTagger
                             txtID3Genre.Text = metaData.Genre;
 
                         picID3AlbumArt.Image = null;
+                        chkTransferArt.Visible = false;
                         if (metaData.Cover != null && !String.IsNullOrEmpty(metaData.Cover.ImageLocation))
                         {
                             var request = WebRequest.Create(metaData.Cover.ImageLocation);
@@ -1488,6 +1492,7 @@ namespace TotalTagger
                                 System.Drawing.Image currentImage = Bitmap.FromStream(stream);
                                 picID3AlbumArt.Image = currentImage.GetThumbnailImage(100, 100, null, System.IntPtr.Zero);
                                 picID3AlbumArt.ImageLocation = metaData.Cover.ImageLocation;
+                                chkTransferArt.Visible = true;
                             }
                         }
 
@@ -1881,10 +1886,12 @@ namespace TotalTagger
                     if (metaData.Cover.Image != null)
                     {
                         picID3AlbumArt.Image = metaData.Cover.Image;
+                        chkTransferArt.Visible = true;
                     }
                     else
                     {
                         picID3AlbumArt.Image = null;
+                        chkTransferArt.Visible = false;
                     }
 
                     songFileBeingProcessed = metaData.Filepath;
@@ -2047,10 +2054,12 @@ namespace TotalTagger
                     if (metaData.Cover.Image != null)
                     {
                         picID3AlbumArt.Image = metaData.Cover.Image;
+                        chkTransferArt.Visible = true;
                     }
                     else
                     {
                         picID3AlbumArt.Image = null;
+                        chkTransferArt.Visible = false;
                     }
 
                     songFileBeingProcessed = metaData.Filepath;
@@ -2107,6 +2116,7 @@ namespace TotalTagger
                         txtID3Genre.Text = "";
 
                         picID3AlbumArt.Image = null;
+                        chkTransferArt.Visible = false;
 
                         txtNewTitle.Text = "";
                         txtNewGenre.Text = "";
@@ -2135,6 +2145,7 @@ namespace TotalTagger
             txtID3Genre.Text = "";
 
             picID3AlbumArt.Image = null;
+            chkTransferArt.Visible = false;
 
             txtNewTitle.Text = "";
             txtNewGenre.Text = "";
@@ -2171,15 +2182,22 @@ namespace TotalTagger
         {
             if( txtID3Title.Text.Length > 0 && txtID3Artist.Text.Length > 0)
             {
-                txtNewTitle.Text = txtID3Title.Text;
-                txtNewArtist.Text = txtID3Artist.Text;
-                if(txtID3Album.Text.Length > 0 )
-                    txtNewAlbum.Text = txtID3Album.Text;
-                if (txtID3Genre.Text.Length > 0)
-                    txtNewGenre.Text = txtID3Genre.Text;
-                if (txtID3Year.Text.Length > 0)
+                if( chkTransferTitle.Checked)
+                    txtNewTitle.Text = txtID3Title.Text;
+
+                if( chkTransferArtist.Checked)
+                    txtNewArtist.Text = txtID3Artist.Text;
+
+                if(chkTransferAlbum.Checked&& txtID3Album.Text.Length > 0 )
+                        txtNewAlbum.Text = txtID3Album.Text;
+
+                if ( chkTransferGenre.Checked && txtID3Genre.Text.Length > 0)
+                        txtNewGenre.Text = txtID3Genre.Text;
+
+                if( chkTransferDate.Checked && txtID3Year.Text.Length > 0)
                     txtNewDate.Text = txtID3Year.Text;
-                if( picID3AlbumArt.Image != null )
+
+                if( chkTransferArt.Checked && picID3AlbumArt.Image != null )
                 {
                     picNewAlbumArt.Image = null;
                     picNewAlbumArt.Image = picID3AlbumArt.Image;
@@ -2195,6 +2213,16 @@ namespace TotalTagger
                 LoadAppSettings();
                 LoadServiceComboBox();
             }
+        }
+
+        private void PicNewAlbumArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChkAll_CheckedChanged(object sender, EventArgs e)
+        {
+            chkTransferArt.Checked = chkTransferAlbum.Checked = chkTransferArtist.Checked = chkTransferDate.Checked = chkTransferGenre.Checked = chkTransferTitle.Checked = chkAll.Checked;
         }
     }
 
