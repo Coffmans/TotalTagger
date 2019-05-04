@@ -86,6 +86,14 @@ namespace TotalTagger
             dgvBestMatchResults.Columns.Add(imageLocationColumn);
 
             rbDeezer.Checked = true;
+
+            rbDiscogs.Enabled = (MainWindow.serviceSettings.DiscogsClientKey.Length > 0);
+            rbLastFM.Enabled = (MainWindow.serviceSettings.LastFMClientKey.Length > 0);
+            rbNapster.Enabled = (MainWindow.serviceSettings.NapsterClientKey.Length > 0);
+            rbSpotify.Enabled = (MainWindow.serviceSettings.SpotifyClientKey.Length > 0);
+            rbGaliboo.Enabled = (MainWindow.serviceSettings.GalibooClientKey.Length > 0);
+            rbGenius.Enabled = (MainWindow.serviceSettings.GeniusClientKey.Length > 0);
+            rbMusixMatch.Enabled = (MainWindow.serviceSettings.MusixMatchKey.Length > 0);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -364,13 +372,32 @@ namespace TotalTagger
         {
             dgvBestMatchResults.Enabled = bEnable;
             rbDeezer.Enabled = bEnable;
-            rbDiscogs.Enabled = bEnable;
+            if(MainWindow.serviceSettings.DiscogsClientKey.Length > 0)
+                rbDiscogs.Enabled = bEnable;
+
             rbITunes.Enabled = bEnable;
-            rbLastFM.Enabled = bEnable;
-            rbMusicBrainz.Enabled = bEnable;
-            rbNapster.Enabled = bEnable;
-            rbSpotify.Enabled = bEnable;
-            rbMusixMatch.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.LastFMClientKey.Length > 0)
+                rbLastFM.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.LastFMClientKey.Length > 0)
+                rbMusicBrainz.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.NapsterClientKey.Length > 0)
+                rbNapster.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.SpotifyClientKey.Length > 0)
+                rbSpotify.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.MusixMatchKey.Length > 0)
+                rbMusixMatch.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.GalibooClientKey.Length > 0)
+                rbGaliboo.Enabled = bEnable;
+
+            if (MainWindow.serviceSettings.GeniusClientKey.Length > 0)
+                rbGenius.Enabled = bEnable;
+
 
             btnWriteTags.Enabled = bEnable;
             btnClose.Enabled = bEnable;

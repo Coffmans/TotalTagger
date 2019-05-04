@@ -33,19 +33,19 @@
             this.btnWriteTags = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbGenius = new System.Windows.Forms.RadioButton();
+            this.rbGaliboo = new System.Windows.Forms.RadioButton();
             this.rbMusixMatch = new System.Windows.Forms.RadioButton();
             this.rbSpotify = new System.Windows.Forms.RadioButton();
             this.rbMusicBrainz = new System.Windows.Forms.RadioButton();
+            this.rbNapster = new System.Windows.Forms.RadioButton();
             this.rbDiscogs = new System.Windows.Forms.RadioButton();
             this.rbDeezer = new System.Windows.Forms.RadioButton();
             this.rbITunes = new System.Windows.Forms.RadioButton();
             this.rbLastFM = new System.Windows.Forms.RadioButton();
-            this.rbNapster = new System.Windows.Forms.RadioButton();
             this.btnSearchForAlbums = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblProgress = new System.Windows.Forms.Label();
-            this.rbGaliboo = new System.Windows.Forms.RadioButton();
-            this.rbGenius = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBestMatchResults)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,10 +98,32 @@
             this.panel1.Size = new System.Drawing.Size(710, 26);
             this.panel1.TabIndex = 13;
             // 
+            // rbGenius
+            // 
+            this.rbGenius.AutoSize = true;
+            this.rbGenius.Location = new System.Drawing.Point(131, 4);
+            this.rbGenius.Name = "rbGenius";
+            this.rbGenius.Size = new System.Drawing.Size(58, 17);
+            this.rbGenius.TabIndex = 17;
+            this.rbGenius.TabStop = true;
+            this.rbGenius.Text = "Genius";
+            this.rbGenius.UseVisualStyleBackColor = true;
+            // 
+            // rbGaliboo
+            // 
+            this.rbGaliboo.AutoSize = true;
+            this.rbGaliboo.Location = new System.Drawing.Point(65, 4);
+            this.rbGaliboo.Name = "rbGaliboo";
+            this.rbGaliboo.Size = new System.Drawing.Size(61, 17);
+            this.rbGaliboo.TabIndex = 16;
+            this.rbGaliboo.TabStop = true;
+            this.rbGaliboo.Text = "Galiboo";
+            this.rbGaliboo.UseVisualStyleBackColor = true;
+            // 
             // rbMusixMatch
             // 
             this.rbMusixMatch.AutoSize = true;
-            this.rbMusixMatch.Location = new System.Drawing.Point(478, 4);
+            this.rbMusixMatch.Location = new System.Drawing.Point(408, 4);
             this.rbMusixMatch.Name = "rbMusixMatch";
             this.rbMusixMatch.Size = new System.Drawing.Size(82, 17);
             this.rbMusixMatch.TabIndex = 14;
@@ -112,7 +134,7 @@
             // rbSpotify
             // 
             this.rbSpotify.AutoSize = true;
-            this.rbSpotify.Location = new System.Drawing.Point(632, 4);
+            this.rbSpotify.Location = new System.Drawing.Point(562, 4);
             this.rbSpotify.Name = "rbSpotify";
             this.rbSpotify.Size = new System.Drawing.Size(57, 17);
             this.rbSpotify.TabIndex = 13;
@@ -123,7 +145,7 @@
             // rbMusicBrainz
             // 
             this.rbMusicBrainz.AutoSize = true;
-            this.rbMusicBrainz.Location = new System.Drawing.Point(391, 4);
+            this.rbMusicBrainz.Location = new System.Drawing.Point(321, 4);
             this.rbMusicBrainz.Name = "rbMusicBrainz";
             this.rbMusicBrainz.Size = new System.Drawing.Size(82, 17);
             this.rbMusicBrainz.TabIndex = 12;
@@ -131,10 +153,21 @@
             this.rbMusicBrainz.Text = "MusicBrainz";
             this.rbMusicBrainz.UseVisualStyleBackColor = true;
             // 
+            // rbNapster
+            // 
+            this.rbNapster.AutoSize = true;
+            this.rbNapster.Location = new System.Drawing.Point(495, 4);
+            this.rbNapster.Name = "rbNapster";
+            this.rbNapster.Size = new System.Drawing.Size(62, 17);
+            this.rbNapster.TabIndex = 8;
+            this.rbNapster.TabStop = true;
+            this.rbNapster.Text = "Napster";
+            this.rbNapster.UseVisualStyleBackColor = true;
+            // 
             // rbDiscogs
             // 
             this.rbDiscogs.AutoSize = true;
-            this.rbDiscogs.Location = new System.Drawing.Point(67, 4);
+            this.rbDiscogs.Location = new System.Drawing.Point(625, 4);
             this.rbDiscogs.Name = "rbDiscogs";
             this.rbDiscogs.Size = new System.Drawing.Size(63, 17);
             this.rbDiscogs.TabIndex = 11;
@@ -158,7 +191,7 @@
             // rbITunes
             // 
             this.rbITunes.AutoSize = true;
-            this.rbITunes.Location = new System.Drawing.Point(264, 4);
+            this.rbITunes.Location = new System.Drawing.Point(194, 4);
             this.rbITunes.Name = "rbITunes";
             this.rbITunes.Size = new System.Drawing.Size(57, 17);
             this.rbITunes.TabIndex = 6;
@@ -169,24 +202,13 @@
             // rbLastFM
             // 
             this.rbLastFM.AutoSize = true;
-            this.rbLastFM.Location = new System.Drawing.Point(326, 4);
+            this.rbLastFM.Location = new System.Drawing.Point(256, 4);
             this.rbLastFM.Name = "rbLastFM";
             this.rbLastFM.Size = new System.Drawing.Size(60, 17);
             this.rbLastFM.TabIndex = 7;
             this.rbLastFM.TabStop = true;
             this.rbLastFM.Text = "LastFM";
             this.rbLastFM.UseVisualStyleBackColor = true;
-            // 
-            // rbNapster
-            // 
-            this.rbNapster.AutoSize = true;
-            this.rbNapster.Location = new System.Drawing.Point(565, 4);
-            this.rbNapster.Name = "rbNapster";
-            this.rbNapster.Size = new System.Drawing.Size(62, 17);
-            this.rbNapster.TabIndex = 8;
-            this.rbNapster.TabStop = true;
-            this.rbNapster.Text = "Napster";
-            this.rbNapster.UseVisualStyleBackColor = true;
             // 
             // btnSearchForAlbums
             // 
@@ -214,28 +236,6 @@
             this.lblProgress.Size = new System.Drawing.Size(1453, 19);
             this.lblProgress.TabIndex = 15;
             this.lblProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // rbGaliboo
-            // 
-            this.rbGaliboo.AutoSize = true;
-            this.rbGaliboo.Location = new System.Drawing.Point(135, 4);
-            this.rbGaliboo.Name = "rbGaliboo";
-            this.rbGaliboo.Size = new System.Drawing.Size(61, 17);
-            this.rbGaliboo.TabIndex = 16;
-            this.rbGaliboo.TabStop = true;
-            this.rbGaliboo.Text = "Galiboo";
-            this.rbGaliboo.UseVisualStyleBackColor = true;
-            // 
-            // rbGenius
-            // 
-            this.rbGenius.AutoSize = true;
-            this.rbGenius.Location = new System.Drawing.Point(201, 4);
-            this.rbGenius.Name = "rbGenius";
-            this.rbGenius.Size = new System.Drawing.Size(58, 17);
-            this.rbGenius.TabIndex = 17;
-            this.rbGenius.TabStop = true;
-            this.rbGenius.Text = "Genius";
-            this.rbGenius.UseVisualStyleBackColor = true;
             // 
             // SingleLookupForm
             // 
