@@ -460,9 +460,9 @@ namespace TotalTagger
                 EnableControls(true);
                 EnableExistingMetadataControls(true);
                 EnableSearchMetadataControls(true);
-                EnableServiceRadioButtons();
                 EnableSearchAlbumsControls(true);
                 EnableSearchArtworkControls(true);
+                EnableServiceRadioButtons();
 
                 if (flagQueryForData.HasFlag(QueryForMetadata.Artwork))
                 {
