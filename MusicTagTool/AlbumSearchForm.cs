@@ -117,6 +117,9 @@ namespace TotalTagger
 
             rbITunes.Checked = true;
             btnSaveTags.Enabled = false;
+
+            rbLastFM.Enabled = (MainWindow.serviceSettings.LastFMClientKey.Length > 0);
+            rbNapster.Enabled = (MainWindow.serviceSettings.NapsterClientKey.Length > 0);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -270,6 +273,12 @@ namespace TotalTagger
             rbITunes.Enabled = bEnable;
             rbLastFM.Enabled = bEnable;
             rbNapster.Enabled = bEnable;
+
+            if( bEnable )
+            {
+                rbLastFM.Enabled = (MainWindow.serviceSettings.LastFMClientKey.Length > 0);
+                rbNapster.Enabled = (MainWindow.serviceSettings.NapsterClientKey.Length > 0);
+            }
             btnSaveTags.Enabled = bEnable;
         }
 
