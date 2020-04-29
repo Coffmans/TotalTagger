@@ -1,23 +1,23 @@
-﻿<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>
-<metadata created=\"2018-10-24T23:14:02.752Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\" xmlns:ns2=\"http://musicbrainz.org/ns/ext#-2.0\">
-	<release-list count=\"3\" offset=\"0\">
-		<release id=\"1eeb6397-27cc-4257-8de2-5e4385380b6d\" ns2:score=\"100\">
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata created="2018-10-24T23:14:02.752Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ns2="http://musicbrainz.org/ns/ext#-2.0">
+	<release-list count="3" offset="0">
+		<release id="1eeb6397-27cc-4257-8de2-5e4385380b6d" ns2:score="100">
 			<title>The Way I Am (Slushii remix)</title>
 			<status>Official</status>
 			<packaging>None</packaging>
 			<artist-credit>
 				<name-credit>
-					<artist id=\"525f1f1c-03f0-4bc8-8dfd-e7521f87631b\">
+					<artist id="525f1f1c-03f0-4bc8-8dfd-e7521f87631b">
 						<name>Charlie Puth</name>
 						<sort-name>Puth, Charlie</sort-name>
 					</artist>
 				</name-credit>
 			</artist-credit>
-			<release-group id=\"796e3101-80d7-4b24-a09b-a81c1cd1589f\" type=\"Single\" type-id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">
+			<release-group id="796e3101-80d7-4b24-a09b-a81c1cd1589f" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
 				<title>The Way I Am (Slushii remix)</title>
-				<primary-type id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">Single</primary-type>
+				<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
 				<secondary-type-list>
-					<secondary-type id=\"0c60f497-ff81-3818-befd-abfc84a4858b\">Remix</secondary-type>
+					<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
 				</secondary-type-list>
 			</release-group>
 			<date>2018-09-07</date>
@@ -25,7 +25,7 @@
 			<release-event-list>
 				<release-event>
 					<date>2018-09-07</date>
-					<area id=\"489ce91b-6658-3307-9877-795b68554c98\">
+					<area id="489ce91b-6658-3307-9877-795b68554c98">
 						<name>United States</name>
 						<sort-name>United States</sort-name>
 						<iso-3166-1-code-list>
@@ -36,22 +36,22 @@
 			</release-event-list>
 			<label-info-list>
 				<label-info>
-					<label id=\"f1360227-7d1b-4aa6-b5e3-44a00dce1343\">
+					<label id="f1360227-7d1b-4aa6-b5e3-44a00dce1343">
 						<name>Artist Partners</name>
 					</label>
 				</label-info>
 			</label-info-list>
-			<medium-list count=\"1\">
+			<medium-list count="1">
 				<track-count>1</track-count>
 				<medium>
 					<format>Digital Media</format>
-					<disc-list count=\"0\"/>
-					<track-list count=\"1\"/>
+					<disc-list count="0"/>
+					<track-list count="1"/>
 				</medium>
 			</medium-list>
 			<tag-list/>
 		</release>
-		<release id=\"a18b7c0b-0f1a-4da7-bdb9-1586cdbf082d\" ns2:score=\"95\">
+		<release id="a18b7c0b-0f1a-4da7-bdb9-1586cdbf082d" ns2:score="95">
 			<title>The Way I Am (Eden Prince remix)</title>
 			<status>Official</status>
 			<packaging>None</packaging>
@@ -61,17 +61,17 @@
 			</text-representation>
 			<artist-credit>
 				<name-credit>
-					<artist id=\"525f1f1c-03f0-4bc8-8dfd-e7521f87631b\">
+					<artist id="525f1f1c-03f0-4bc8-8dfd-e7521f87631b">
 						<name>Charlie Puth</name>
 						<sort-name>Puth, Charlie</sort-name>
 					</artist>
 				</name-credit>
 			</artist-credit>
-			<release-group id=\"d1da0b3d-db9f-44e3-a793-45e763f28e33\" type=\"Single\" type-id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">
+			<release-group id="d1da0b3d-db9f-44e3-a793-45e763f28e33" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
 				<title>The Way I Am (Eden Prince remix)</title>
-				<primary-type id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">Single</primary-type>
+				<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
 				<secondary-type-list>
-					<secondary-type id=\"0c60f497-ff81-3818-befd-abfc84a4858b\">Remix</secondary-type>
+					<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
 				</secondary-type-list>
 			</release-group>
 			<date>2018-07-27</date>
@@ -79,7 +79,7 @@
 			<release-event-list>
 				<release-event>
 					<date>2018-07-27</date>
-					<area id=\"489ce91b-6658-3307-9877-795b68554c98\">
+					<area id="489ce91b-6658-3307-9877-795b68554c98">
 						<name>United States</name>
 						<sort-name>United States</sort-name>
 						<iso-3166-1-code-list>
@@ -91,22 +91,22 @@
 			<barcode>075679866035</barcode>
 			<label-info-list>
 				<label-info>
-					<label id=\"f1360227-7d1b-4aa6-b5e3-44a00dce1343\">
+					<label id="f1360227-7d1b-4aa6-b5e3-44a00dce1343">
 						<name>Artist Partners</name>
 					</label>
 				</label-info>
 			</label-info-list>
-			<medium-list count=\"1\">
+			<medium-list count="1">
 				<track-count>1</track-count>
 				<medium>
 					<format>Digital Media</format>
-					<disc-list count=\"0\"/>
-					<track-list count=\"1\"/>
+					<disc-list count="0"/>
+					<track-list count="1"/>
 				</medium>
 			</medium-list>
 			<tag-list/>
 		</release>
-		<release id=\"e0623cb9-b731-485c-bc67-1de126b8d30b\" ns2:score=\"95\">
+		<release id="e0623cb9-b731-485c-bc67-1de126b8d30b" ns2:score="95">
 			<title>The Way I Am (Taska Black remix)</title>
 			<status>Official</status>
 			<packaging>None</packaging>
@@ -116,17 +116,17 @@
 			</text-representation>
 			<artist-credit>
 				<name-credit>
-					<artist id=\"525f1f1c-03f0-4bc8-8dfd-e7521f87631b\">
+					<artist id="525f1f1c-03f0-4bc8-8dfd-e7521f87631b">
 						<name>Charlie Puth</name>
 						<sort-name>Puth, Charlie</sort-name>
 					</artist>
 				</name-credit>
 			</artist-credit>
-			<release-group id=\"0520522d-d23c-4091-a5f8-73bb259ddf60\" type=\"Single\" type-id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">
+			<release-group id="0520522d-d23c-4091-a5f8-73bb259ddf60" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
 				<title>The Way I Am (Taska Black remix)</title>
-				<primary-type id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">Single</primary-type>
+				<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
 				<secondary-type-list>
-					<secondary-type id=\"0c60f497-ff81-3818-befd-abfc84a4858b\">Remix</secondary-type>
+					<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
 				</secondary-type-list>
 			</release-group>
 			<date>2018-08-17</date>
@@ -134,7 +134,7 @@
 			<release-event-list>
 				<release-event>
 					<date>2018-08-17</date>
-					<area id=\"489ce91b-6658-3307-9877-795b68554c98\">
+					<area id="489ce91b-6658-3307-9877-795b68554c98">
 						<name>United States</name>
 						<sort-name>United States</sort-name>
 						<iso-3166-1-code-list>
@@ -146,17 +146,17 @@
 			<barcode>075679866028</barcode>
 			<label-info-list>
 				<label-info>
-					<label id=\"f1360227-7d1b-4aa6-b5e3-44a00dce1343\">
+					<label id="f1360227-7d1b-4aa6-b5e3-44a00dce1343">
 						<name>Artist Partners</name>
 					</label>
 				</label-info>
 			</label-info-list>
-			<medium-list count=\"1\">
+			<medium-list count="1">
 				<track-count>1</track-count>
 				<medium>
 					<format>Digital Media</format>
-					<disc-list count=\"0\"/>
-					<track-list count=\"1\"/>
+					<disc-list count="0"/>
+					<track-list count="1"/>
 				</medium>
 			</medium-list>
 			<tag-list/>

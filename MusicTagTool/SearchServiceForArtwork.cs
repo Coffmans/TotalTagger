@@ -10,6 +10,12 @@ namespace TotalTagger
 {
     class SearchServiceForArtwork
     {
+        private BindingList<Id3Tag> listRetrievedMetadata = new BindingList<Id3Tag>();
+        public BindingList<Id3Tag> ListRetrievedMetadata
+        {
+            get { return listRetrievedMetadata; }
+            set { listRetrievedMetadata = value; }
+        }
 
         public Id3Tag gSongMetaData { get; set; }
         public string Result = "";
@@ -37,8 +43,8 @@ namespace TotalTagger
         {
             LastFM queryLastFM = new LastFM();
             queryLastFM.ExistingMetadata = songToSearch;
-            BindingList<Id3Tag> albumMetadata = new BindingList<Id3Tag>();
-            queryLastFM.ListRetrievedTags = albumMetadata;
+            BindingList<Id3Tag> artistMetadata = new BindingList<Id3Tag>();
+            queryLastFM.ListRetrievedTags = artistMetadata;
 
             CancellationTokenSource source = new CancellationTokenSource();
             CancellationToken cancellationToken = new CancellationToken();
@@ -58,8 +64,8 @@ namespace TotalTagger
             Spotify querySpotify = new Spotify();
 
             querySpotify.ExistingMetadata = songToSearch;
-            BindingList<Id3Tag> albumMetadata = new BindingList<Id3Tag>();
-            querySpotify.ListRetrievedTags = albumMetadata;
+            BindingList<Id3Tag> artistMetadata = new BindingList<Id3Tag>();
+            querySpotify.ListRetrievedTags = artistMetadata;
 
             CancellationTokenSource source = new CancellationTokenSource();
             CancellationToken cancellationToken = new CancellationToken();
@@ -79,8 +85,8 @@ namespace TotalTagger
             ITunes queryiTunes = new ITunes();
 
             queryiTunes.ExistingMetadata = songToSearch;
-            BindingList<Id3Tag> albumMetadata = new BindingList<Id3Tag>();
-            queryiTunes.ListRetrievedTags = albumMetadata;
+            BindingList<Id3Tag> artistMetadata = new BindingList<Id3Tag>();
+            queryiTunes.ListRetrievedTags = artistMetadata;
 
             CancellationTokenSource source = new CancellationTokenSource();
             CancellationToken cancellationToken = new CancellationToken();
@@ -100,8 +106,8 @@ namespace TotalTagger
             Deezer queryDeezer = new Deezer();
 
             queryDeezer.ExistingMetadata = songToSearch;
-            BindingList<Id3Tag> albumMetadata = new BindingList<Id3Tag>();
-            queryDeezer.ListRetrievedTags = albumMetadata;
+            BindingList<Id3Tag> artistMetadata = new BindingList<Id3Tag>();
+            queryDeezer.ListRetrievedTags = artistMetadata;
 
             CancellationTokenSource source = new CancellationTokenSource();
             CancellationToken cancellationToken = new CancellationToken();
@@ -121,8 +127,8 @@ namespace TotalTagger
         //    MusixMatch queryMusixMatch = new MusixMatch();
 
         //    queryMusixMatch.ExistingMetadata = songToSearch;
-        //    BindingList<Id3Tag> albumMetadata = new BindingList<Id3Tag>();
-        //    queryMusixMatch.ListRetrievedTags = albumMetadata;
+        //    BindingList<Id3Tag> artistMetadata = new BindingList<Id3Tag>();
+        //    queryMusixMatch.ListRetrievedTags = artistMetadata;
 
         //    CancellationTokenSource source = new CancellationTokenSource();
         //    CancellationToken cancellationToken = new CancellationToken();

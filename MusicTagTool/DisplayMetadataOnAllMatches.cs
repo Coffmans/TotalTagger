@@ -173,6 +173,10 @@ namespace TotalTagger
             EnableSearchAlbumsControls(false);
             EnableSearchArtworkControls(false);
 
+            dataGridAllResults.DataSource = null;
+            dataGridAllResults.Rows.Clear();
+            dataGridAllResults.Refresh();
+
             flagMetadataService = 0;
             SetMetadataService();
 
@@ -219,6 +223,7 @@ namespace TotalTagger
                 return;
             }
 
+            flagQueryForData = 0;
             flagQueryForData |= QueryForMetadata.Artwork;
 
 
@@ -229,6 +234,10 @@ namespace TotalTagger
             EnableSearchMetadataControls(false);
             EnableSearchAlbumsControls(false);
             EnableSearchArtworkControls(false);
+
+            dataGridAllResults.DataSource = null;
+            dataGridAllResults.Rows.Clear();
+            dataGridAllResults.Refresh();
 
             songToSearch = new Id3Tag();
             songToSearch.Title = txtExistingTitle.Text;
@@ -293,9 +302,10 @@ namespace TotalTagger
         #region BackGroundWorker
         private void Bw_DoWork(object sender, DoWorkEventArgs e)
         {
+            listRetrievedMetadata = new BindingList<Id3Tag>();
             if (flagQueryForData.HasFlag(QueryForMetadata.Metadata))
             {
-                listRetrievedMetadata = new BindingList<Id3Tag>();
+                //listRetrievedMetadata = new BindingList<Id3Tag>();
                 SearchServiceForMetadata searchForMetadata = new SearchServiceForMetadata();
                 searchForMetadata.ListRetrievedMetadata = listRetrievedMetadata;
 
@@ -309,7 +319,7 @@ namespace TotalTagger
                 else if (flagMetadataService.HasFlag(MetadataService.LastFM))
                 {
                     InvokeToProgressLabel("Searching LastFM for " + songToSearch.Title);
-                    searchForMetadata.CallServiceForMetadata(MetadataService.MusicBrainz, songToSearch);
+                    searchForMetadata.CallServiceForMetadata(MetadataService.LastFM, songToSearch);
                     InvokeToProgressLabel(searchForMetadata.Result);
                 }
                 else if (flagMetadataService.HasFlag(MetadataService.Discogs))
@@ -368,6 +378,7 @@ namespace TotalTagger
             {
                 Id3Tag songSelected = songToSearch;
                 SearchServiceForArtwork searchForArtwork = new SearchServiceForArtwork();
+//                searchForArtwork.ListRetrievedMetadata = listRetrievedMetadata;
 
                 if (flagMetadataService.HasFlag(MetadataService.LastFM))
                 {
@@ -397,6 +408,8 @@ namespace TotalTagger
                     songToSearch = searchForArtwork.gSongMetaData;
                     InvokeToProgressLabel(searchForArtwork.Result);
                 }
+                //LoadResultsIntoGrid();
+                //InvokeToProgressLabel("Search " + (listRetrievedMetadata.Count > 0 ? "Completed!" : "Found No Matches!"));
             }
             else if (flagQueryForData.HasFlag(QueryForMetadata.Albums))
             {
@@ -441,6 +454,8 @@ namespace TotalTagger
                     searchForAlbum.CallServiceForAlbum(MetadataService.Spotify, songToSearch);
                     InvokeToProgressLabel(searchForAlbum.Result);
                 }
+                LoadResultsIntoGrid();
+                InvokeToProgressLabel("Search " + (listRetrievedMetadata.Count > 0 ? "Completed!" : "Found No Matches!"));
             }
         }
 
@@ -466,7 +481,7 @@ namespace TotalTagger
 
                 if (flagQueryForData.HasFlag(QueryForMetadata.Artwork))
                 {
-                    if (songToSearch.Cover != null && !String.IsNullOrEmpty(songToSearch.Cover.ImageLocation))
+                    if (songToSearch != null && songToSearch.Cover != null && !String.IsNullOrEmpty(songToSearch.Cover.ImageLocation))
                     {
                         picRetrievedArt.ImageLocation = songToSearch.Cover.ImageLocation;
                         var request = WebRequest.Create(songToSearch.Cover.ImageLocation);
@@ -685,9 +700,9 @@ namespace TotalTagger
                     txtRetrievedArtist.Text = metaData.Artist;
                     if( !String.IsNullOrEmpty(metaData.Date) )
                     {
-
-                    }
                         txtRetrievedYear.Text = DateTime.Parse(metaData.Date).Year.ToString();
+                    }
+                        
                     txtRetrievedAlbum.Text = metaData.Album;
                     txtRetrievedGenre.Text = metaData.Genre;
 

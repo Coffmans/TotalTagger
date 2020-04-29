@@ -148,7 +148,6 @@ namespace TotalTagger
         public string GalibooClientKey { get; set; }
         public string DiscogsClientID { get; set; }
         public string DiscogsClientKey { get; set; }
-
         public string MusixMatchKey { get; set; }
 
         public AppSettings()
@@ -161,6 +160,7 @@ namespace TotalTagger
             GalibooClientKey = "";
             DiscogsClientID = "";
             DiscogsClientKey = "";
+            MusixMatchKey = "";
         }
     }
 

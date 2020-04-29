@@ -43,7 +43,7 @@ namespace TotalTagger
 
                 System.IO.Stream stream = webResponse.GetResponseStream();
 
-                image = System.Drawing.Image.FromStream(stream);
+                //image = System.Drawing.Image.FromStream(stream);
 
                 webResponse.Close();
             }

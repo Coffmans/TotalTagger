@@ -13,6 +13,144 @@ using System.Xml.Linq;
 
 namespace TotalTagger
 {
+    public class GeniusTrackData
+    {
+
+        public class Rootobject
+        {
+            public Meta meta { get; set; }
+            public Response response { get; set; }
+        }
+
+        public class Meta
+        {
+            public int status { get; set; }
+        }
+
+        public class Response
+        {
+            public Hit[] hits { get; set; }
+        }
+
+        public class Hit
+        {
+            public object[] highlights { get; set; }
+            public string index { get; set; }
+            public string type { get; set; }
+            public Result result { get; set; }
+        }
+
+        public class Result
+        {
+            public int annotation_count { get; set; }
+            public string api_path { get; set; }
+            public string full_title { get; set; }
+            public string header_image_thumbnail_url { get; set; }
+            public string header_image_url { get; set; }
+            public int id { get; set; }
+            public int lyrics_owner_id { get; set; }
+            public string lyrics_state { get; set; }
+            public string path { get; set; }
+            public int? pyongs_count { get; set; }
+            public string song_art_image_thumbnail_url { get; set; }
+            public Stats stats { get; set; }
+            public string title { get; set; }
+            public string title_with_featured { get; set; }
+            public string url { get; set; }
+            public Primary_Artist primary_artist { get; set; }
+        }
+
+        public class Stats
+        {
+            public bool hot { get; set; }
+            public int unreviewed_annotations { get; set; }
+            public int concurrents { get; set; }
+            public int pageviews { get; set; }
+        }
+
+        public class Primary_Artist
+        {
+            public string api_path { get; set; }
+            public string header_image_url { get; set; }
+            public int id { get; set; }
+            public string image_url { get; set; }
+            public bool is_meme_verified { get; set; }
+            public bool is_verified { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+            public int iq { get; set; }
+        }
+    }
+
+    public class GeniusData
+    {
+
+        public class Rootobject
+        {
+            public Meta meta { get; set; }
+            public Response response { get; set; }
+        }
+
+        public class Meta
+        {
+            public int status { get; set; }
+        }
+
+        public class Response
+        {
+            public Hit[] hits { get; set; }
+        }
+
+        public class Hit
+        {
+            public object[] highlights { get; set; }
+            public string index { get; set; }
+            public string type { get; set; }
+            public Result result { get; set; }
+        }
+
+        public class Result
+        {
+            public int annotation_count { get; set; }
+            public string api_path { get; set; }
+            public string full_title { get; set; }
+            public string header_image_thumbnail_url { get; set; }
+            public string header_image_url { get; set; }
+            public int id { get; set; }
+            public int lyrics_owner_id { get; set; }
+            public string lyrics_state { get; set; }
+            public string path { get; set; }
+            public int? pyongs_count { get; set; }
+            public string song_art_image_thumbnail_url { get; set; }
+            public Stats stats { get; set; }
+            public string title { get; set; }
+            public string title_with_featured { get; set; }
+            public string url { get; set; }
+            public Primary_Artist primary_artist { get; set; }
+        }
+
+        public class Stats
+        {
+            public bool hot { get; set; }
+            public int unreviewed_annotations { get; set; }
+            public int concurrents { get; set; }
+            public int pageviews { get; set; }
+        }
+
+        public class Primary_Artist
+        {
+            public string api_path { get; set; }
+            public string header_image_url { get; set; }
+            public int id { get; set; }
+            public string image_url { get; set; }
+            public bool is_meme_verified { get; set; }
+            public bool is_verified { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+            public int iq { get; set; }
+        }
+
+    }
     class Genius : TotalTagger.MusicAPIs.TagService
     {
         public bool QueryForMetadataNonAsync(System.Threading.CancellationToken cancellationToken, bool searchForAlbum = false, int limit = 25)
@@ -132,11 +270,11 @@ namespace TotalTagger
                                                 if (json != null && json["response"] != null)
                                                 {
                                                     var song = json["response"]["song"];
-                                                    if( song != null )
+                                                    if (song != null)
                                                     {
                                                         RetrievedMetadata.Date = (string)song["release_date"];
                                                         var album = song["album"];
-                                                        if( album != null)
+                                                        if (album != null)
                                                         {
                                                             RetrievedMetadata.Album = (string)album["full_title"];
                                                             //RetrievedMetadata.Cover.ImageLocation = (string)album["cover_art_url"];
@@ -228,7 +366,7 @@ namespace TotalTagger
                                 }
                             }
                         }
-    
+
                         QueryResult = "Success";
                         ResultOfQuery = true;
                         return true;

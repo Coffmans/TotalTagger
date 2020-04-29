@@ -1,36 +1,29 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using ParkSquare.Gracenote;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using System.Collections.Concurrent;
-using ParkSquare.Gracenote;
-using System.Reflection;
-using System.Net;
-using System.Threading;
-using RestSharp;
-using System.Web;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using Un4seen.Bass;
+
 //using ManagedBass;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace TotalTagger
 {
     public partial class MainWindow : Form
     {
-        string[] extension = { "*.mp3" };
+        private string[] extension = { "*.mp3" };
         private string songsDirectory = "";
         private string songFileBeingProcessed = "";
         private int selectedListIndex = -1;
 
-        enum SelectedService
+        private enum SelectedService
         {
             None = 0,
             iTunes = 1,
@@ -47,7 +40,7 @@ namespace TotalTagger
             Genius = 12
         }
 
-        enum ActionToPerform
+        private enum ActionToPerform
         {
             LoadFiles = 0,
             RetrieveMetadata,
@@ -56,11 +49,16 @@ namespace TotalTagger
         };
 
         private BackgroundWorker _backgroundWorker;
-        delegate void InvokeToDataGridDelegate(Id3Tag metaData, int nRow);
-        delegate void InvokeToDataGridSourceDelegate(bool refreshOnly);
-        delegate void InvokeToBindingListDelegate(Id3Tag song);
-        delegate void InvokeToProgressBarLabelDelegate(string sText);
-        delegate void InvokeToProgressBarDelegate(int nPercentage);
+
+        private delegate void InvokeToDataGridDelegate(Id3Tag metaData, int nRow);
+
+        private delegate void InvokeToDataGridSourceDelegate(bool refreshOnly);
+
+        private delegate void InvokeToBindingListDelegate(Id3Tag song);
+
+        private delegate void InvokeToProgressBarLabelDelegate(string sText);
+
+        private delegate void InvokeToProgressBarDelegate(int nPercentage);
 
         private const int GRID_FILENAME = 0;
         private const int GRID_ID3_TITLE = 1;
@@ -79,13 +77,14 @@ namespace TotalTagger
         private TaggingTool.GenreDataTable m_dtTaggingToolTable;
 
         public static AppSettings serviceSettings = new AppSettings();
-        IEnumerable<string> songList;
+        private IEnumerable<string> songList;
 
         public static Font fontProgressBarText = new Font("Courier New", 8, FontStyle.Regular);
         public static Font fontProgressBarColor = new Font("Consolas", 12, FontStyle.Regular);
 
         public static bool streamLoaded = false;
         private static int streamHandle = -1;
+
         public static int GetStreamHandle
         {
             get { return streamHandle; }
@@ -94,6 +93,7 @@ namespace TotalTagger
 
         public static IntPtr theHandle;
         public static Stopwatch timeListenedTracker = new Stopwatch();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -160,7 +160,7 @@ namespace TotalTagger
 
                     Id3Tag _ID3Tags = ReadWriteID3.ReadID3Tags(f);
                     listId3TagForAllFiles.Add(_ID3Tags);
-                    InvokeToProgressBarLabel("Reading " +_ID3Tags.Title + " from " + _ID3Tags.Artist);
+                    InvokeToProgressBarLabel("Reading " + _ID3Tags.Title + " from " + _ID3Tags.Artist);
                     nSong++;
                 }
 
@@ -168,9 +168,9 @@ namespace TotalTagger
 
                 if (listId3TagForAllFiles != null && listId3TagForAllFiles.Any())
                 {
-                    for(int song=0; song < listId3TagForAllFiles.Count; song++)
+                    for (int song = 0; song < listId3TagForAllFiles.Count; song++)
                     {
-                        if(listId3TagForAllFiles[song].Cover != null )
+                        if (listId3TagForAllFiles[song].Cover != null)
                         {
                             InvokeToProgressBarLabel("Reading In " + nSong + " of " + listId3TagForAllFiles.Count + " songs");
                             InvokeToDataGrid(listId3TagForAllFiles[song], song);
@@ -192,7 +192,6 @@ namespace TotalTagger
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             Assembly myAssembly = Assembly.GetExecutingAssembly();
             using (Stream stream = myAssembly.GetManifestResourceStream("TotalTagger.Genres.xml"))
             {
@@ -296,7 +295,7 @@ namespace TotalTagger
                 if (songsDirectory != lblFolder.Text)
                 {
                     songsDirectory = lblFolder.Text;
-                    if(!songsDirectory.EndsWith(Convert.ToString(Path.DirectorySeparatorChar)))
+                    if (!songsDirectory.EndsWith(Convert.ToString(Path.DirectorySeparatorChar)))
                     {
                         songsDirectory += Path.DirectorySeparatorChar;
                     }
@@ -320,11 +319,11 @@ namespace TotalTagger
         {
             serviceSettings = new AppSettings();
             string ID = ConfigData.GetConfigData("DCCI");
-            if(!String.IsNullOrEmpty(ID))
+            if (!String.IsNullOrEmpty(ID))
                 serviceSettings.DiscogsClientID = ConfigData.DecryptString(ID, Properties.Resources.Pass + Properties.Resources.Phrase);
             string key = ConfigData.GetConfigData("DCCK");
-            if( !String.IsNullOrEmpty(key))
-                serviceSettings.DiscogsClientKey = ConfigData.DecryptString(key, Properties.Resources.Pass+Properties.Resources.Phrase);
+            if (!String.IsNullOrEmpty(key))
+                serviceSettings.DiscogsClientKey = ConfigData.DecryptString(key, Properties.Resources.Pass + Properties.Resources.Phrase);
 
             key = ConfigData.GetConfigData("GACK");
             if (!String.IsNullOrEmpty(key))
@@ -428,8 +427,8 @@ namespace TotalTagger
                 cbItem.Value = SelectedService.Spotify;
                 cbServiceSimpleLookup.Items.Add(cbItem);
             }
-
         }
+
         private void UpdateMetadataForSong(bool bReplaceMetadata, Id3Tag metaData, int nSongIndex)
         {
             //try
@@ -498,7 +497,7 @@ namespace TotalTagger
             //}
             //catch (System.Exception ex)
             //{
-            //    InvokeToProgressBarLabel(ex.ToString());	
+            //    InvokeToProgressBarLabel(ex.ToString());
             //}
         }
 
@@ -553,13 +552,11 @@ namespace TotalTagger
                     dataGridSongFiles.Refresh();
                 }
 
-
                 //lblSongDirectory.Font = new Font(lblSongDirectory.Font, FontStyle.Regular);
                 //lblProgressBar.Visible = true;
                 EnableDisableControls(false);
                 lblProgressBar.Visible = true;
                 _backgroundWorker.RunWorkerAsync(eAction);
-
             }
             catch (Exception exception)
             {
@@ -583,11 +580,11 @@ namespace TotalTagger
 
             if (musicData.Cover != null)
             {
-                if (  musicData.Cover.Image != null)
+                if (musicData.Cover.Image != null)
                 {
                     dataGridSongFiles.Rows[nRow].Cells[GRID_FILE_ARTWORK_HEADER].Value = musicData.Cover.Image.GetThumbnailImage(25, 25, null, System.IntPtr.Zero);
                 }
-                else if( !String.IsNullOrEmpty(musicData.Cover.ImageLocation))
+                else if (!String.IsNullOrEmpty(musicData.Cover.ImageLocation))
                 {
                     var request = WebRequest.Create(musicData.Cover.ImageLocation);
 
@@ -605,12 +602,13 @@ namespace TotalTagger
         {
             if (dataGridSongFiles.InvokeRequired)
             {
-                this.Invoke(new InvokeToBindingListDelegate(InvokeToBindingList),song);
+                this.Invoke(new InvokeToBindingListDelegate(InvokeToBindingList), song);
                 return;
             }
             listId3TagForAllFiles.Add(song);
         }
-        private void InvokeToDataGridSource(bool refreshOnly=false)
+
+        private void InvokeToDataGridSource(bool refreshOnly = false)
         {
             // If it's coming from another thread, Invoke _InvokeToListView trough the _InvokeToListViewDelegate and end this thing.
             if (dataGridSongFiles.InvokeRequired)
@@ -619,7 +617,7 @@ namespace TotalTagger
                 return;
             }
 
-            if( refreshOnly)
+            if (refreshOnly)
             {
                 dataGridSongFiles.Refresh();
                 return;
@@ -746,18 +744,15 @@ namespace TotalTagger
             {
                 InvokeToProgressBarLabel(ex.ToString());
             }
-
         }
 
         private void Bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if ((e.Cancelled == true))
             {
-
             }
             else if (!(e.Error == null))
             {
-
             }
             else
             {
@@ -766,7 +761,6 @@ namespace TotalTagger
 
             lblProgressBar.Visible = false;
             EnableDisableControls(true);
-
         }
 
         private void Bw_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -777,7 +771,6 @@ namespace TotalTagger
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -801,7 +794,6 @@ namespace TotalTagger
                     txtNewGenre.Text = "";
                     picNewAlbumArt.Image = null;
                     picNewAlbumArt.ImageLocation = "";
-
 
                     MetadataService flag = 0;
                     ComboboxItem cbSelectedItem = (ComboboxItem)cbServiceSimpleLookup.SelectedItem;
@@ -898,7 +890,6 @@ namespace TotalTagger
                                 System.Drawing.Image currentImage = Bitmap.FromStream(stream);
                                 picNewAlbumArt.Image = currentImage.GetThumbnailImage(100, 100, null, System.IntPtr.Zero);
                             }
-
                         }
                     }
 
@@ -1056,14 +1047,12 @@ namespace TotalTagger
                     //{
                     //    e.Value = Properties.Resources.blank;
                     //}
-
                 }
             }
             catch (System.Exception ex)
             {
                 InvokeToProgressBarLabel(ex.ToString());
             }
-
         }
 
         private void DataGridSongFiles_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -1101,7 +1090,7 @@ namespace TotalTagger
                     DisplayMetadataOnAllMatches displayAllForm = new DisplayMetadataOnAllMatches(metaData.Filepath, metaData);
                     DialogResult result = displayAllForm.ShowDialog();
 
-                    if( result == DialogResult.OK)
+                    if (result == DialogResult.OK)
                     {
                         metaData = displayAllForm.gSongMetaData;
 
@@ -1127,7 +1116,6 @@ namespace TotalTagger
 
                         InvokeToDataGrid(metaData, selectedListIndex);
                     }
-
                 }
             }
             catch (System.Exception ex)
@@ -1161,7 +1149,6 @@ namespace TotalTagger
                     PerformProcessingForSongFiles(ActionToPerform.LoadFiles);
                 }
             }
-
         }
 
         private void searchForMetadataForSelectedAudioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1185,9 +1172,9 @@ namespace TotalTagger
                         txtID3Title.Text = metaData.Title;
                         txtID3Artist.Text = metaData.Artist;
                         txtID3Year.Text = metaData.Date;
-                        if(metaData.Album.Length > 0 )
+                        if (metaData.Album.Length > 0)
                             txtID3Album.Text = metaData.Album;
-                        if( metaData.Genre.Length > 0 )
+                        if (metaData.Genre.Length > 0)
                             txtID3Genre.Text = metaData.Genre;
 
                         picID3AlbumArt.Image = null;
@@ -1206,13 +1193,13 @@ namespace TotalTagger
 
                         //UpdateMetadataForSong(true, metaData, selectedListIndex);
                         string writeResult = ReadWriteID3.WriteID3Tags(metaData.Filepath, metaData);
-                        if(writeResult.Length > 0 )
+                        if (writeResult.Length > 0)
                         {
                             MessageBox.Show(writeResult, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
 
-                        metaData.Title =  metaData.Title;
+                        metaData.Title = metaData.Title;
                         metaData.Artist = metaData.Artist;
                         metaData.Album = metaData.Album;
                         metaData.Date = metaData.Date;
@@ -1224,19 +1211,16 @@ namespace TotalTagger
                         }
 
                         listId3TagForAllFiles[selectedListIndex] = metaData;
-    
+
                         InvokeToDataGrid(metaData, selectedListIndex);
                     }
-
                 }
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-
 
         private void btnSaveMetadata_Click(object sender, EventArgs e)
         {
@@ -1282,7 +1266,7 @@ namespace TotalTagger
         {
             string encodedArtist = System.Web.HttpUtility.UrlEncode(txtID3Artist.Text.TrimEnd());
             string encodedAlbum = System.Web.HttpUtility.UrlEncode(txtID3Album.Text);
-            
+
             try
             {
                 using (WebClient client = new WebClient())
@@ -1326,12 +1310,10 @@ namespace TotalTagger
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void removeAlbumArtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1340,12 +1322,6 @@ namespace TotalTagger
             picID3AlbumArt.ImageLocation = "";
             chkTransferArt.Visible = false;
         }
-
-        #region UnusedCode
-
-        #endregion
-
-
 
         private void toolStripButtonAlbumArt_Click(object sender, EventArgs e)
         {
@@ -1399,13 +1375,10 @@ namespace TotalTagger
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void toolStripButtonRemoveTags_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnOpenFolder_Click(object sender, EventArgs e)
@@ -1450,14 +1423,12 @@ namespace TotalTagger
                     PerformProcessingForSongFiles(ActionToPerform.LoadFiles);
                 }
             }
-
         }
 
         private void btnAdvancedLookup_Click(object sender, EventArgs e)
         {
             try
             {
-
                 int nItems = dataGridSongFiles.SelectedRows.Count;
 
                 if (nItems > 0)
@@ -1513,28 +1484,25 @@ namespace TotalTagger
                         //if (!String.IsNullOrEmpty(metaData.Cover.ImageLocation))
                         //{
                         //    metaData.Cover = picID3AlbumArt;
-                        //    metaData.Cover = 
+                        //    metaData.Cover =
                         //}
 
                         listId3TagForAllFiles[selectedListIndex] = metaData;
 
                         InvokeToDataGrid(metaData, selectedListIndex);
                     }
-
                 }
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnSaveTags_Click(object sender, EventArgs e)
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -1547,11 +1515,11 @@ namespace TotalTagger
                         return;
                     }
 
-                    if(txtNewTitle.Text.Length == 0 && 
+                    if (txtNewTitle.Text.Length == 0 &&
                        txtNewAlbum.Text.Length == 0 &&
                        txtNewArtist.Text.Length == 0 &&
                        txtNewDate.Text.Length == 0 &&
-                       txtNewGenre.Text.Length == 0 )
+                       txtNewGenre.Text.Length == 0)
                     {
                         MessageBox.Show("No new metadata to write to file!", "No New Metadata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -1575,14 +1543,14 @@ namespace TotalTagger
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
         private void SaveChangesToID3(Id3Tag metaData, bool RemoveTags)
-        { 
+        {
             try
             {
                 string writeResult;
-                if ( RemoveTags)
+                if (RemoveTags)
                 {
                     writeResult = ReadWriteID3.RemoveID3Tags(metaData.Filepath);
                     if (writeResult.Length > 0)
@@ -1597,10 +1565,10 @@ namespace TotalTagger
                 else
                 {
                     writeResult = ReadWriteID3.WriteID3Tags(metaData.Filepath, metaData);
-                    if (writeResult.Length > 0  )
+                    if (writeResult.Length > 0)
                     {
                         WriteToLogWindow(writeResult);
-                        MessageBox.Show(writeResult,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(writeResult, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -1621,7 +1589,6 @@ namespace TotalTagger
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnBestMatch_Click(object sender, EventArgs e)
@@ -1633,7 +1600,7 @@ namespace TotalTagger
                 if (nItems > 0)
                 {
                     List<BestMatch> listSelectedSongs = new List<BestMatch>();
-                    for(int item=0; item < nItems; item++)
+                    for (int item = 0; item < nItems; item++)
                     {
                         selectedListIndex = dataGridSongFiles.SelectedRows[item].Index;
                         Id3Tag metaData = listId3TagForAllFiles[selectedListIndex];
@@ -1643,7 +1610,7 @@ namespace TotalTagger
                         listSelectedSongs.Add(match);
                     }
 
-                    if( listSelectedSongs.Any())
+                    if (listSelectedSongs.Any())
                     {
                         SingleLookupForm bestMatchForm = new SingleLookupForm(songsDirectory, listSelectedSongs);
                         DialogResult result = bestMatchForm.ShowDialog();
@@ -1664,7 +1631,6 @@ namespace TotalTagger
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -1688,7 +1654,6 @@ namespace TotalTagger
                     txtNewGenre.Text = "";
                     picNewAlbumArt.Image = null;
                     picNewAlbumArt.ImageLocation = "";
-
 
                     MetadataService flag = 0;
                     ComboboxItem cbSelectedItem = (ComboboxItem)cbServiceSimpleLookup.SelectedItem;
@@ -1762,7 +1727,7 @@ namespace TotalTagger
                     SearchServiceForMetadata lookup = new SearchServiceForMetadata();
                     lookup.Limit = 1;
                     lookup.ListRetrievedMetadata = null;
-                    if ( lookup.CallServiceForMetadata(flag, metaData) )
+                    if (lookup.CallServiceForMetadata(flag, metaData))
                     {
                         if (!String.IsNullOrEmpty(lookup.gSongMetaData.Album))
                             txtNewAlbum.Text = lookup.gSongMetaData.Album;
@@ -1799,7 +1764,6 @@ namespace TotalTagger
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -1838,7 +1802,7 @@ namespace TotalTagger
             //search files for missing albums
             AlbumSearchForm missingAlbumForm = new AlbumSearchForm(songsDirectory);
             missingAlbumForm.ListAllSongs = listId3TagForAllFiles;
-            if( DialogResult.OK == missingAlbumForm.ShowDialog())
+            if (DialogResult.OK == missingAlbumForm.ShowDialog())
             {
                 dataGridSongFiles.Refresh();
             }
@@ -1847,7 +1811,6 @@ namespace TotalTagger
 
         private void label13_Click(object sender, EventArgs e)
         {
-
         }
 
         private void WriteToLogWindow(string text)
@@ -1857,19 +1820,16 @@ namespace TotalTagger
 
         private void label13_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void txtLogging_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dataGridSongFiles_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -1903,7 +1863,7 @@ namespace TotalTagger
                     txtNewAlbum.Text = "";
                     picNewAlbumArt.Image = null;
 
-                    if( TotalTagger.BASS.BassLibrary.IsPlaying())
+                    if (TotalTagger.BASS.BassLibrary.IsPlaying())
                     {
                         TotalTagger.BASS.BassLibrary.StopPlayer();
                     }
@@ -1913,14 +1873,12 @@ namespace TotalTagger
             {
                 MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -1936,7 +1894,6 @@ namespace TotalTagger
             {
                 MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         public static long GetPosition()
@@ -1960,7 +1917,6 @@ namespace TotalTagger
         {
             try
             {
-
                 int nItems = dataGridSongFiles.Rows.Count;
 
                 if (nItems > 0)
@@ -1968,7 +1924,7 @@ namespace TotalTagger
                     selectedListIndex = dataGridSongFiles.CurrentRow.Index;
                     Id3Tag metaData = listId3TagForAllFiles[selectedListIndex];
 
-                    if(TotalTagger.BASS.BassLibrary.IsPaused())
+                    if (TotalTagger.BASS.BassLibrary.IsPaused())
                     {
                         TotalTagger.BASS.BassLibrary.Play();
                         return;
@@ -1982,16 +1938,15 @@ namespace TotalTagger
             {
                 MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        void FlushTimeListened()
+        private void FlushTimeListened()
         {
             if (timeListenedTracker.IsRunning) timeListenedTracker.Restart();
             else timeListenedTracker.Reset();
         }
 
-        void playbackEnded(int handle, int channel, int data, IntPtr user)
+        private void playbackEnded(int handle, int channel, int data, IntPtr user)
         {
             timeListenedTracker.Stop();
             //if (streamLoaded)
@@ -2000,7 +1955,7 @@ namespace TotalTagger
             //}
         }
 
-        void playbackStalled(int handle, int channel, int data, IntPtr user)
+        private void playbackStalled(int handle, int channel, int data, IntPtr user)
         {
             if ((int)data == 1) timeListenedTracker.Start();
             else timeListenedTracker.Stop();
@@ -2009,7 +1964,6 @@ namespace TotalTagger
         private void btnPause_Click(object sender, EventArgs e)
         {
             TotalTagger.BASS.BassLibrary.PausePlayer();
-
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -2031,7 +1985,6 @@ namespace TotalTagger
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnPlayFile_Click(object sender, EventArgs e)
@@ -2078,14 +2031,12 @@ namespace TotalTagger
 
                     TotalTagger.BASS.BassLibrary.LoadAudioFile(metaData.Filepath);
                     TotalTagger.BASS.BassLibrary.Play();
-
                 }
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void deleteFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2098,9 +2049,9 @@ namespace TotalTagger
                 {
                     selectedListIndex = dataGridSongFiles.CurrentRow.Index;
 
-                    if( selectedListIndex >= 0 )
+                    if (selectedListIndex >= 0)
                     {
-                        if( DialogResult.No == MessageBox.Show("Once a file is deleted, it might not be able to be recovered.\n\n Do you want to proceed with delete?", "Are You Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) )
+                        if (DialogResult.No == MessageBox.Show("Once a file is deleted, it might not be able to be recovered.\n\n Do you want to proceed with delete?", "Are You Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                         {
                             return;
                         }
@@ -2126,14 +2077,12 @@ namespace TotalTagger
 
                         dataGridSongFiles.Refresh();
                     }
-
                 }
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void BtnRefreshList_Click(object sender, EventArgs e)
@@ -2180,24 +2129,24 @@ namespace TotalTagger
 
         private void BtnCopyOldToNew_Click(object sender, EventArgs e)
         {
-            if( txtID3Title.Text.Length > 0 && txtID3Artist.Text.Length > 0)
+            if (txtID3Title.Text.Length > 0 && txtID3Artist.Text.Length > 0)
             {
-                if( chkTransferTitle.Checked)
+                if (chkTransferTitle.Checked)
                     txtNewTitle.Text = txtID3Title.Text;
 
-                if( chkTransferArtist.Checked)
+                if (chkTransferArtist.Checked)
                     txtNewArtist.Text = txtID3Artist.Text;
 
-                if(chkTransferAlbum.Checked&& txtID3Album.Text.Length > 0 )
-                        txtNewAlbum.Text = txtID3Album.Text;
+                if (chkTransferAlbum.Checked && txtID3Album.Text.Length > 0)
+                    txtNewAlbum.Text = txtID3Album.Text;
 
-                if ( chkTransferGenre.Checked && txtID3Genre.Text.Length > 0)
-                        txtNewGenre.Text = txtID3Genre.Text;
+                if (chkTransferGenre.Checked && txtID3Genre.Text.Length > 0)
+                    txtNewGenre.Text = txtID3Genre.Text;
 
-                if( chkTransferDate.Checked && txtID3Year.Text.Length > 0)
+                if (chkTransferDate.Checked && txtID3Year.Text.Length > 0)
                     txtNewDate.Text = txtID3Year.Text;
 
-                if( chkTransferArt.Checked && picID3AlbumArt.Image != null )
+                if (chkTransferArt.Checked && picID3AlbumArt.Image != null)
                 {
                     picNewAlbumArt.Image = null;
                     picNewAlbumArt.Image = picID3AlbumArt.Image;
@@ -2208,7 +2157,7 @@ namespace TotalTagger
         private void btnSettings_Click_1(object sender, EventArgs e)
         {
             SettingsForm settingsWindows = new SettingsForm(serviceSettings);
-            if( DialogResult.OK == settingsWindows.ShowDialog())
+            if (DialogResult.OK == settingsWindows.ShowDialog())
             {
                 LoadAppSettings();
                 LoadServiceComboBox();
@@ -2217,7 +2166,6 @@ namespace TotalTagger
 
         private void PicNewAlbumArt_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ChkAll_CheckedChanged(object sender, EventArgs e)

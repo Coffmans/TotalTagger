@@ -11,9 +11,175 @@ using System.Xml.Linq;
 
 namespace TotalTagger
 {
+    public class LastFMSongData
+    {
+        //public class Rootobject
+        //{
+        public Results results { get; set; }
+        //}
+    }
+
+        public class Results
+        {
+            public OpensearchQuery opensearchQuery { get; set; }
+            public string opensearchtotalResults { get; set; }
+            public string opensearchstartIndex { get; set; }
+            public string opensearchitemsPerPage { get; set; }
+            public Trackmatches trackmatches { get; set; }
+            public Attr attr { get; set; }
+        }
+
+        public class OpensearchQuery
+        {
+            public string text { get; set; }
+            public string role { get; set; }
+            public string startPage { get; set; }
+        }
+
+        public class Trackmatches
+        {
+            public Track[] track { get; set; }
+        }
+
+        public class Track
+        {
+            public string name { get; set; }
+            public string artist { get; set; }
+            public string url { get; set; }
+            public string streamable { get; set; }
+            public string listeners { get; set; }
+            public Image[] image { get; set; }
+            public string mbid { get; set; }
+        }
+
+        public class Image
+        {
+            public string text { get; set; }
+            public string size { get; set; }
+        }
+
+        public class Attr
+        {
+        }
+    //}
+
+    public class LastFMTrackInfo
+    {
+
+        public class Rootobject
+        {
+            public Track track { get; set; }
+        }
+
+        public class Track
+        {
+            public string name { get; set; }
+            public string url { get; set; }
+            public string duration { get; set; }
+            public Streamable streamable { get; set; }
+            public string listeners { get; set; }
+            public string playcount { get; set; }
+            public Artist artist { get; set; }
+            public Album album { get; set; }
+            public Toptags toptags { get; set; }
+            public Wiki wiki { get; set; }
+        }
+
+        public class Streamable
+        {
+            public string text { get; set; }
+            public string fulltrack { get; set; }
+        }
+
+        public class Artist
+        {
+            public string name { get; set; }
+            public string mbid { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Album
+        {
+            public string artist { get; set; }
+            public string title { get; set; }
+            public string url { get; set; }
+            public Image[] image { get; set; }
+        }
+
+        public class Image
+        {
+            public string text { get; set; }
+            public string size { get; set; }
+        }
+
+        public class Toptags
+        {
+            public Tag[] tag { get; set; }
+        }
+
+        public class Tag
+        {
+            public string name { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Wiki
+        {
+            public string published { get; set; }
+            public string summary { get; set; }
+            public string content { get; set; }
+        }
+    }
+
+    public class LastFMAlbum
+    {
+
+        public class Rootobject
+        {
+            public Topalbums topalbums { get; set; }
+        }
+
+        public class Topalbums
+        {
+            public Album[] album { get; set; }
+            public Attr attr { get; set; }
+        }
+
+        public class Attr
+        {
+            public string artist { get; set; }
+            public string page { get; set; }
+            public string perPage { get; set; }
+            public string totalPages { get; set; }
+            public string total { get; set; }
+        }
+
+        public class Album
+        {
+            public string name { get; set; }
+            public int playcount { get; set; }
+            public string url { get; set; }
+            public Artist artist { get; set; }
+            public Image[] image { get; set; }
+            public string mbid { get; set; }
+        }
+
+        public class Artist
+        {
+            public string name { get; set; }
+            public string mbid { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Image
+        {
+            public string text { get; set; }
+            public string size { get; set; }
+        }
+    }
     class LastFM : TotalTagger.MusicAPIs.TagService
     {
-        public bool QueryForMetadataNonAsync(System.Threading.CancellationToken cancellationToken, int limit = 25)
+        public async Task<bool> QueryForMetadataNonAsync(System.Threading.CancellationToken cancellationToken, int limit = 25)
         {
             try
             {
@@ -71,17 +237,61 @@ namespace TotalTagger
 
                     string query = null;
                     //if (LastFMSearch)
-                    {
+//                    {
                         query = Properties.Settings.Default.LastFMTrackSearchUrl + MainWindow.serviceSettings.LastFMClientKey +
                             "&format=json&autocorrect=1&track=" + encodedTitle +
                             (encodedArtist.Length > 0 ? "&artist=" + encodedArtist : "");
-                    }
+                    //                    }
                     //else
                     //{
                     //    query = Properties.Settings.Default.LastFMTrackGetInfo + MainWindow.serviceSettings.LastFMClientKey +
                     //        "&format=json&autocorrect=1&track=" + encodedTitle +
                     //        (encodedArtist.Length > 0 ? "&artist=" + encodedArtist : "");
                     //}
+                    RestService _restService = new RestService();
+                    LastFMSongData _lastFMData = await  _restService.GetLastFMSongData(query);
+                    if( _lastFMData != null && _lastFMData.results.trackmatches.track.Any())
+                    {
+                        int trackCount = 0;
+                        foreach(var lastFM in _lastFMData.results.trackmatches.track)
+                        {
+                            string trackTitle = lastFM.name;
+                            string trackArtist = lastFM.artist;
+
+                            RetrievedMetadata = new Id3Tag
+                            {
+                                Title = trackTitle,
+                                Artist = trackArtist,
+                                Cover = new System.Windows.Forms.PictureBox()
+                            };
+
+                            if (lastFM.image != null)
+                            {
+                                //string imageLocation = track["strTrackThumb"].ToString();
+                                foreach (var image in lastFM.image)
+                                {
+                                    if (image.size.ToString().Equals("medium"))
+                                    {
+                                        RetrievedMetadata.Cover.ImageLocation = image.text;
+                                    }
+                                }
+                            }
+
+                            trackCount++;
+                            if (trackCount >= limit)
+                            {
+                                QueryResult = "Success";
+                                ResultOfQuery = true;
+                                return true;
+
+                            }
+                            ListRetrievedTags.Add(RetrievedMetadata);
+
+                        }
+                        QueryResult = "Success";
+                        ResultOfQuery = true;
+                        return true;
+                    }
                     string response = client.DownloadString(query);
 
                     if (response != null)
@@ -98,7 +308,7 @@ namespace TotalTagger
                                 {
                                     if (trackmatches["track"].Any())
                                     {
-                                        if( limit == 1)
+                                        if (limit == 1)
                                         {
                                             return PerformBestMatchLookup(searchableTitle, searchableArtist, json, trackmatches);
                                         }
@@ -129,7 +339,7 @@ namespace TotalTagger
                                             }
 
                                             trackCount++;
-                                            if( trackCount >=  limit)
+                                            if (trackCount >= limit)
                                             {
                                                 QueryResult = "Success";
                                                 ResultOfQuery = true;

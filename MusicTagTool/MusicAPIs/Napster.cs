@@ -10,7 +10,120 @@ using Newtonsoft.Json.Linq;
 
 namespace TotalTagger
 {
+    public class NapsterData
+    {
 
+        public class Rootobject
+        {
+            public Meta meta { get; set; }
+            public Links links { get; set; }
+            public Datum[] data { get; set; }
+        }
+
+        public class Meta
+        {
+            public int totalCount { get; set; }
+        }
+
+        public class Links
+        {
+            public string self { get; set; }
+        }
+
+        public class Datum
+        {
+            public string type { get; set; }
+            public string id { get; set; }
+            public int index { get; set; }
+            public int disc { get; set; }
+            public string href { get; set; }
+            public int playbackSeconds { get; set; }
+            public bool _explicit { get; set; }
+            public bool isStreamable { get; set; }
+            public string name { get; set; }
+            public string isrc { get; set; }
+            public string shortcut { get; set; }
+            public object[] blurbs { get; set; }
+            public string artistName { get; set; }
+            public string albumName { get; set; }
+            public Format[] formats { get; set; }
+            public string albumId { get; set; }
+            public Contributors contributors { get; set; }
+            public Links1 links { get; set; }
+            public string previewURL { get; set; }
+            public Linked linked { get; set; }
+        }
+
+        public class Contributors
+        {
+            public string primaryArtist { get; set; }
+            public string engineer { get; set; }
+            public string remixer { get; set; }
+            public string producer { get; set; }
+            public string composer { get; set; }
+        }
+
+        public class Links1
+        {
+            public Artists artists { get; set; }
+            public Albums albums { get; set; }
+            public Composers composers { get; set; }
+            public Genres genres { get; set; }
+            public Tags tags { get; set; }
+        }
+
+        public class Artists
+        {
+            public string[] ids { get; set; }
+            public string href { get; set; }
+        }
+
+        public class Albums
+        {
+            public string[] ids { get; set; }
+            public string href { get; set; }
+        }
+
+        public class Composers
+        {
+            public string[] ids { get; set; }
+            public string href { get; set; }
+        }
+
+        public class Genres
+        {
+            public string[] ids { get; set; }
+            public string href { get; set; }
+        }
+
+        public class Tags
+        {
+            public string[] ids { get; set; }
+            public string href { get; set; }
+        }
+
+        public class Linked
+        {
+            public Genre[] genres { get; set; }
+        }
+
+        public class Genre
+        {
+            public string type { get; set; }
+            public string id { get; set; }
+            public string name { get; set; }
+            public string href { get; set; }
+            public string shortcut { get; set; }
+        }
+
+        public class Format
+        {
+            public string type { get; set; }
+            public int bitrate { get; set; }
+            public string name { get; set; }
+        }
+
+    }
     /// <summary>
     /// Class for Napster API
     /// </summary>
