@@ -30,6 +30,9 @@ I created this project to allow me to improve the metadata of my library of MP3 
 </ul>
 
 <h3>Additional Screenshots</h3>
+Simple Lookup
+<img src="https://github.com/Coffmans/TotalTagger/blob/master/screenshots/simple lookup.jpg"  title="Simple Lookup">
+
 Advanced Lookup
 <img src="https://github.com/Coffmans/TotalTagger/blob/master/screenshots/advanced lookup.jpg"  title="Advanced Lookup">
 
