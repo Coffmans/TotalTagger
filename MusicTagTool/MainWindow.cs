@@ -140,7 +140,12 @@ namespace TotalTagger
 
         public static IEnumerable<string> GetFiles(string path, string[] searchPatterns, SearchOption searchOption = SearchOption.TopDirectoryOnly)
         {
-            return searchPatterns.AsParallel().SelectMany(searchPattern => Directory.EnumerateFiles(path, searchPattern, searchOption));
+            if( Directory.Exists(path))
+                return searchPatterns.AsParallel().SelectMany(searchPattern => Directory.EnumerateFiles(path, searchPattern, searchOption));
+            else
+            {
+                return null;
+            }
         }
 
         private void LoadFilesIntoGrid(string sMusicDirectory)
@@ -154,14 +159,21 @@ namespace TotalTagger
 
                 Id3Tag _DummyID3 = new Id3Tag();
 
+
                 foreach (var f in songList)
                 {
                     //InvokeToProgressBarLabel("Reading In " + f.nSong + " of " + nAllSongs + " songs");
-
-                    Id3Tag _ID3Tags = ReadWriteID3.ReadID3Tags(f);
-                    listId3TagForAllFiles.Add(_ID3Tags);
-                    InvokeToProgressBarLabel("Reading " + _ID3Tags.Title + " from " + _ID3Tags.Artist);
-                    nSong++;
+                    try
+                    {
+                        Id3Tag _ID3Tags = ReadWriteID3.ReadID3Tags(f);
+                        listId3TagForAllFiles.Add(_ID3Tags);
+                        InvokeToProgressBarLabel("Reading " + _ID3Tags.Title + " from " + _ID3Tags.Artist);
+                        nSong++;
+                    }
+                    catch (Exception e)
+                    {
+                        InvokeToProgressBarLabel(e.Message); 
+                    }
                 }
 
                 InvokeToDataGridSource(false);
@@ -182,11 +194,15 @@ namespace TotalTagger
             }
             catch (UnauthorizedAccessException UAEx)
             {
-                Console.WriteLine(UAEx.Message);
+                InvokeToProgressBarLabel(UAEx.Message); 
             }
             catch (PathTooLongException PathEx)
             {
-                Console.WriteLine(PathEx.Message);
+                InvokeToProgressBarLabel(PathEx.Message);
+            }
+            catch (Exception exception)
+            {
+                InvokeToProgressBarLabel(exception.Message);
             }
         }
 
@@ -214,105 +230,6 @@ namespace TotalTagger
             listId3TagForAllFiles.AllowRemove = true;
 
             LoadServiceComboBox();
-
-            //ComboboxItem cbItem = new ComboboxItem();
-            //cbItem.Text = "Deezer";
-            //cbItem.Value = SelectedService.Deezer;
-            //cbServiceSimpleLookup.Items.Add(cbItem);
-
-            //if( !String.IsNullOrEmpty(serviceSettings.DiscogsClientID))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "Discogs";
-            //    cbItem.Value = SelectedService.Discogs;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-            //if (!String.IsNullOrEmpty(serviceSettings.GalibooClientKey))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "Galiboo";
-            //    cbItem.Value = SelectedService.Galiboo;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-
-            //if (!String.IsNullOrEmpty(serviceSettings.GeniusClientKey))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "Genius";
-            //    cbItem.Value = SelectedService.Genius;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-
-            //cbItem = new ComboboxItem();
-            //cbItem.Text = "iTunes";
-            //cbItem.Value = SelectedService.iTunes;
-            //int index = cbServiceSimpleLookup.Items.Add(cbItem);
-            //cbServiceSimpleLookup.SelectedIndex = index;
-
-            //if (!String.IsNullOrEmpty(serviceSettings.LastFMClientKey))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "LastFM";
-            //    cbItem.Value = SelectedService.LastFM;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-
-            //if (!String.IsNullOrEmpty(serviceSettings.NapsterClientKey))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "Napster";
-            //    cbItem.Value = SelectedService.Napster;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-
-            //cbItem = new ComboboxItem();
-            //cbItem.Text = "MusicBrainz";
-            //cbItem.Value = SelectedService.MusicBrainz;
-            //cbServiceSimpleLookup.Items.Add(cbItem);
-
-            //if (!String.IsNullOrEmpty(serviceSettings.MusixMatchKey))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "MusixMatch";
-            //    cbItem.Value = SelectedService.MusixMatch;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-
-            //if (!String.IsNullOrEmpty(serviceSettings.SpotifyClientID))
-            //{
-            //    cbItem = new ComboboxItem();
-            //    cbItem.Text = "Spotify";
-            //    cbItem.Value = SelectedService.Spotify;
-            //    cbServiceSimpleLookup.Items.Add(cbItem);
-            //}
-
-#if DEBUG
-            string selectedDirectory = @"c:\users\scoff\downloads\test\";
-
-            if (!String.IsNullOrEmpty(selectedDirectory))
-            {
-                lblFolder.Text = selectedDirectory;
-                if (songsDirectory != lblFolder.Text)
-                {
-                    songsDirectory = lblFolder.Text;
-                    if (!songsDirectory.EndsWith(Convert.ToString(Path.DirectorySeparatorChar)))
-                    {
-                        songsDirectory += Path.DirectorySeparatorChar;
-                    }
-                    songList = GetFiles(songsDirectory, extension, SearchOption.AllDirectories);
-
-                    if (songList != null && songList.Count() == 0)
-                    {
-                        return;
-                    }
-
-                    PerformProcessingForSongFiles(ActionToPerform.LoadFiles);
-                }
-            }
-
-            chkTransferArt.Visible = false;
-
-#endif
         }
 
         private void LoadAppSettings()
@@ -429,78 +346,6 @@ namespace TotalTagger
             }
         }
 
-        private void UpdateMetadataForSong(bool bReplaceMetadata, Id3Tag metaData, int nSongIndex)
-        {
-            //try
-            //{
-            //    var file = TagLib.File.Create(metaData.Filepath);
-
-            //    if (bReplaceMetadata)
-            //    {
-            //        metaData.Title = file.Tag.Title = metaData.Title;
-            //        file.Tag.AlbumArtists = new string[] { metaData.Artist };
-            //        metaData.Artist = metaData.Artist;
-            //        metaData.Album = file.Tag.Album = metaData.Album;
-            //        file.Tag.Year = Convert.ToUInt32(metaData.Date);
-            //        metaData.Date = metaData.Date;
-            //        if( !String.IsNullOrEmpty(metaData.Genre ) )
-            //            file.Tag.Genres = new string[] { metaData.Genre };
-            //        metaData.Genre = metaData.Genre;
-
-            //        if (!String.IsNullOrEmpty(metaData.Cover.ImageLocation))
-            //        {
-            //            var request = WebRequest.Create(metaData.Cover.ImageLocation);
-
-            //            using (var response = request.GetResponse())
-            //            using (var stream = response.GetResponseStream())
-            //            {
-            //                System.Drawing.Image currentImage = Bitmap.FromStream(stream);
-            //                metaData.Cover.Image = currentImage.GetThumbnailImage(100, 100, null, System.IntPtr.Zero);
-            //            }
-
-            //            TagLib.Picture pic = new TagLib.Picture
-            //            {
-            //                Type = TagLib.PictureType.FrontCover,
-            //                MimeType = System.Net.Mime.MediaTypeNames.Image.Jpeg,
-            //                Description = "Cover"
-            //            };
-            //            MemoryStream ms = new MemoryStream();
-            //            metaData.Cover.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg); // <-- Error doesn't occur anymore
-            //            ms.Position = 0;
-            //            pic.Data = TagLib.ByteVector.FromStream(ms);
-            //            file.Tag.Pictures = new TagLib.IPicture[1] { pic };
-            //        }
-            //    }
-            //    else
-            //    {
-            //        metaData.Title = file.Tag.Title = metaData.Title;
-            //        file.Tag.AlbumArtists = new string[] { metaData.Artist };
-            //        if( metaData.Date != null && metaData.Date.Any() )
-            //        {
-            //            file.Tag.Year = Convert.ToUInt32(metaData.Date);
-            //        }
-            //        else
-            //        {
-            //            file.Tag.Year = 0;
-            //        }
-
-            //        file.Tag.Genres = new string[] { metaData.Genre };
-            //    }
-
-            //    file.Save();
-
-            //    listId3TagForAllFiles[nSongIndex] = metaData;
-
-            //    InvokeToDataGrid(metaData, nSongIndex);
-
-            //    InvokeToProgressBarLabel("Song \"" + metaData.Filepath + "\" with Title \"" + metaData.Title + "\" Updated!");
-            //}
-            //catch (System.Exception ex)
-            //{
-            //    InvokeToProgressBarLabel(ex.ToString());
-            //}
-        }
-
         private void BtnRetrieveMetadata_Click(object sender, EventArgs e)
         {
             try
@@ -552,8 +397,6 @@ namespace TotalTagger
                     dataGridSongFiles.Refresh();
                 }
 
-                //lblSongDirectory.Font = new Font(lblSongDirectory.Font, FontStyle.Regular);
-                //lblProgressBar.Visible = true;
                 EnableDisableControls(false);
                 lblProgressBar.Visible = true;
                 _backgroundWorker.RunWorkerAsync(eAction);
@@ -702,9 +545,6 @@ namespace TotalTagger
                     InvokeToDataGrid(fileData, nSong);
                 }
             }
-
-            //_backgroundWorker.ReportProgress(100);
-            //InvokeToProgressBarLabel("Completed");
         }
 
         private void Bw_DoWork(object sender, DoWorkEventArgs e)
@@ -713,32 +553,9 @@ namespace TotalTagger
             {
                 ActionToPerform value = (ActionToPerform)e.Argument;
 
-                //if (value == ActionToPerform.RetrieveMetadata)
-                //{
-                //    RetrievedMetaDataFromService();
-                //}
-                //else if (value == ActionToPerform.LoadfilesRetrieveMetadata)
-                //{
-                //    InvokeToProgressBarLabel("Loading of Songs in Folder, Please Wait...");
+                InvokeToProgressBarLabel("Starting Loading of Songs, Please Wait...");
 
-                //    LoadFilesIntoGrid(songsDirectory);
-
-                //    InvokeToProgressBarLabel("Retrieving Metadata for Songs from Online Service, Please Wait...");
-
-                //    RetrievedMetaDataFromService();
-                //}
-                //else if (value == ActionToPerform.UpdateAll)
-                //{
-                //    InvokeToProgressBarLabel("Updating Metadata for All Songs, Please Wait...");
-
-                //    UpdateAllSongsMetadata();
-                //}
-                //else
-                {
-                    InvokeToProgressBarLabel("Starting Loading of Songs, Please Wait...");
-
-                    LoadFilesIntoGrid(songsDirectory);
-                }
+                LoadFilesIntoGrid(songsDirectory);
             }
             catch (System.Exception ex)
             {
@@ -901,53 +718,6 @@ namespace TotalTagger
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //try
-            //{
-            //    int nItems = dataGridSongFiles.Rows.Count;
-
-            //    if (nItems > 0)
-            //    {
-            //        selectedListIndex = dataGridSongFiles.CurrentRow.Index;
-            //        Id3Tag metaData = listId3TagForAllFiles[selectedListIndex];
-
-            //        txtID3Title.Text = metaData.Title;
-            //        txtID3Artist.Text = metaData.Artist;
-            //        txtID3Year.Text = metaData.Date;
-            //        txtID3Album.Text = metaData.Album;
-            //        txtID3Genre.Text = metaData.Genre;
-
-            //        if (metaData.Cover.Image != null )
-            //        {
-            //            picID3AlbumArt.Image = metaData.Cover.Image;
-            //        }
-            //        else
-            //        {
-            //            picID3AlbumArt.Image = null;
-            //        }
-
-            //        songFileBeingProcessed = metaData.Filepath;
-
-            //        txtNewTitle.Text = "";
-            //        txtNewGenre.Text = "";
-            //        txtNewDate.Text = "";
-            //        txtNewArtist.Text = "";
-            //        txtNewAlbum.Text = "";
-
-            //        if (TotalTagger.BASS.BassLibrary.IsPaused())
-            //        {
-            //            TotalTagger.BASS.BassLibrary.Play();
-            //            return;
-            //        }
-
-            //        TotalTagger.BASS.BassLibrary.LoadAudioFile(metaData.Filepath);
-            //        TotalTagger.BASS.BassLibrary.Play();
-
-            //    }
-            //}
-            //catch (System.Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
 
         private void BtnUpdateAll_Click(object sender, EventArgs e)
@@ -968,28 +738,6 @@ namespace TotalTagger
                 MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //private void UpdateAllSongsMetadata()
-        //{
-        //    try
-        //    {
-        //        int nSong = 0;
-        //        int nAllSongs = listId3TagForAllFiles.Count;
-
-        //        for (nSong = 0; nSong < nAllSongs; nSong++)
-        //        {
-        //            InvokeToProgressBarLabel("Updating the Metadata for " + nSong + " of " + nAllSongs + " songs");
-        //            Id3Tag metaData = listId3TagForAllFiles[nSong];
-        //            UpdateMetadataForSong(true, metaData, nSong);
-        //        }
-
-        //        InvokeToProgressBarLabel("Completed");
-        //    }
-        //    catch (System.Exception ex)
-        //    {
-        //        InvokeToProgressBarLabel(ex.ToString());
-        //    }
-        //}
 
         private void EnableDisableControls(bool bEnable)
         {
@@ -1016,37 +764,6 @@ namespace TotalTagger
                             }
                         }
                     }
-                    //else if (dataGridSongFiles.Columns[e.ColumnIndex].Name == GRID_SERVICE_ARTWORK_HEADER)
-                    //{
-                    //    if ((int)dataGridSongFiles.Rows[e.RowIndex].Cells[GRID_METADATA_PULLED].Value == 1)
-                    //    {
-                    //        if ((int)dataGridSongFiles.Rows[e.RowIndex].Cells[GRID_RETRIEVED_ARTWORK].Value == 1)
-                    //        {
-                    //            e.Value = Properties.Resources.check_mark_T;
-                    //        }
-                    //        else
-                    //        {
-                    //            e.Value = Properties.Resources.red_x;
-                    //        }
-                    //    }
-                    //}
-                }
-                else
-                {
-                    //if (dataGridSongFiles.Columns[e.ColumnIndex].Name == GRID_FILE_ARTWORK_HEADER)
-                    //{
-                    //    e.Value = Properties.Resources.blank;
-                    //}
-
-                    //if (dataGridSongFiles.Columns[e.ColumnIndex].Name == GRID_SERVICE_ARTWORK_HEADER)
-                    //{
-                    //    e.Value = Properties.Resources.blank;
-                    //}
-
-                    //if (dataGridSongFiles.Columns[e.ColumnIndex].Name == GRID_SERVICE_METADATA)
-                    //{
-                    //    e.Value = Properties.Resources.blank;
-                    //}
                 }
             }
             catch (System.Exception ex)
@@ -1405,23 +1122,29 @@ namespace TotalTagger
 
         private void btnOpenFiles_Click(object sender, EventArgs e)
         {
-            string selectedDirectory = BrowseForFolder(lblFolder.Text);
 
-            if (!String.IsNullOrEmpty(selectedDirectory))
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Set the properties of the open file dialog
+            openFileDialog.Title = "Open File";
+            openFileDialog.Filter = "MP3 Files (*.mp3)|*.mp3|All Files (*.*)|*.*";
+            openFileDialog.Multiselect = true;
+
+            // Show the dialog and check if the user clicked the OK button
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                lblFolder.Text = selectedDirectory;
-                if (songsDirectory != lblFolder.Text)
+                if (!openFileDialog.FileNames.Any())
                 {
-                    songsDirectory = lblFolder.Text;
-                    songList = GetFiles(songsDirectory, extension, SearchOption.AllDirectories);
-
-                    if (songList != null && songList.Count() == 0)
-                    {
-                        return;
-                    }
-
-                    PerformProcessingForSongFiles(ActionToPerform.LoadFiles);
+                    return;
                 }
+
+                List<string> files = new List<string>();
+                foreach (var file in openFileDialog.FileNames)
+                {
+                    files.Add(file);
+                }
+                songList = (IEnumerable<string>)files;
+                PerformProcessingForSongFiles(ActionToPerform.LoadFiles);
             }
         }
 
@@ -1474,18 +1197,6 @@ namespace TotalTagger
                             MessageBox.Show(writeResult, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-
-                        //metaData.Title = metaData.Title;
-                        //metaData.Artist = metaData.Artist;
-                        //metaData.Album = metaData.Album;
-                        //metaData.Date = metaData.Date;
-                        //metaData.Genre = metaData.Genre;
-
-                        //if (!String.IsNullOrEmpty(metaData.Cover.ImageLocation))
-                        //{
-                        //    metaData.Cover = picID3AlbumArt;
-                        //    metaData.Cover =
-                        //}
 
                         listId3TagForAllFiles[selectedListIndex] = metaData;
 
@@ -1949,10 +1660,6 @@ namespace TotalTagger
         private void playbackEnded(int handle, int channel, int data, IntPtr user)
         {
             timeListenedTracker.Stop();
-            //if (streamLoaded)
-            //{
-            //    if (repeat < 2) advanceFlag = true;
-            //}
         }
 
         private void playbackStalled(int handle, int channel, int data, IntPtr user)

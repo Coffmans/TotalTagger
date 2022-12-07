@@ -46,10 +46,19 @@ namespace TotalTagger
                 _Id3Tag.Genre = file.Tag.FirstGenre;
                 if (file.Tag.Pictures.Any())
                 {
-                    MemoryStream ms = new MemoryStream(file.Tag.Pictures[0].Data.Data);
-                    System.Drawing.Image albumArt;
-                    albumArt = System.Drawing.Image.FromStream(ms);
-                    _Id3Tag.Cover.Image = albumArt.GetThumbnailImage(100, 100, null, System.IntPtr.Zero);
+                    if (file.Tag.Pictures.Length > 0)
+                    {
+                        foreach (var image in file.Tag.Pictures)
+                        {
+                            if (image.Type != PictureType.NotAPicture)
+                            {
+                                MemoryStream ms = new MemoryStream(image.Data.Data);
+                                var albumArt = System.Drawing.Image.FromStream(ms);
+
+                                _Id3Tag.Cover.Image = albumArt.GetThumbnailImage(100, 100, null, System.IntPtr.Zero);
+                            }
+                        }
+                    }
                 }
                 else
                 {

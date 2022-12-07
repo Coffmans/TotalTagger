@@ -137,8 +137,6 @@ namespace TotalTagger
                                         RetrievedMetadata.Album = (string)track["collectionName"];
                                         RetrievedMetadata.Date = (string)track["releaseDate"];
                                         RetrievedMetadata.Genre = (string)track["primaryGenreName"];
-                                        //RetrievedMetadata.TrackCount = (string)track["trackCount"];
-                                        //RetrievedMetadata.TrackNumber = (string)track["trackNumber"];
                                         if (json.SelectToken("results[0].artworkUrl100") != null)
                                             RetrievedMetadata.Cover.ImageLocation = (string)track["artworkUrl100"];
 

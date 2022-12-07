@@ -236,12 +236,6 @@ namespace TotalTagger
                     string result = GetAlbumsFromLastFM(song);
                     InvokeToProgressLabel(result);
                 }
-                //else if (flagMetadataService.HasFlag(MetadataService.Spotify))
-                //{
-                //    InvokeToProgressLabel("Retrieving Albums from Spotify for " + song.MusicMetatada.Title);
-                //    string result = GetAlbumsFromSpotifyAsync();
-                //    InvokeToProgressLabel(result);
-                //}
             }
         }
 
@@ -301,14 +295,6 @@ namespace TotalTagger
             {
                 flagMetadataService |= MetadataService.Deezer;
             }
-            //else if (chkMusicBrainz.Checked)
-            //{
-            //    flagMetadataService |= MetadataService.MusicBrainz;
-            //}
-            //else if (chkSpotify.Checked)
-            //{
-            //    flagMetadataService |= MetadataService.Spotify;
-            //}
         }
 
 
