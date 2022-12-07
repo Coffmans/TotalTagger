@@ -1,3 +1,5 @@
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=9A1DF7&size=24&center=true&width=1000&lines=TotalTagger+-+Tag+your+MP3+Files)](https://git.io/typing-svg)
+
 <img src="https://github.com/Coffmans/TotalTagger/blob/ea46fdf61f2816d9d54a7863ebbf3d2f50b3a6d4/screenshots/Total Tagger.jpg"  title="Total Tagger">
 
 I created this project to allow me to improve the metadata of my library of MP3 files. It is designed to use different sources for metadata such as Spotify, iTunes, Deezer, and more.
